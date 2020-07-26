@@ -194,4 +194,8 @@ export default {
 :focus {
 	@apply outline-none shadow-focus;
 }
+
+* {
+	@apply transition-colors duration-200;
+}
 </style>

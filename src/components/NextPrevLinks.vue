@@ -9,8 +9,8 @@
 					'flex items-center',
 					'rounded-lg',
 					'font-bold',
-					'text-brand-muted bg-brand-button',
-					'hover:text-brand',
+					'text-on-button bg-button',
+					'hover:text-on-button-hover',
 					'transition-colors duration-200',
 				]"
 			>
@@ -26,8 +26,8 @@
 					'flex items-center',
 					'rounded-lg',
 					'font-bold',
-					'text-brand-muted bg-brand-button',
-					'hover:text-brand',
+					'text-on-button bg-button',
+					'hover:text-on-button-hover',
 					'transition-colors duration-200',
 				]"
 			>

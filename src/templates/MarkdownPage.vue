@@ -6,7 +6,7 @@
 			</div>
 
 			<div class="order-1 w-full md:w-2/3">
-				<div class="pt-10 prose" v-html="$page.markdownPage.content" />
+				<div class="pt-10 prose prose-dark lg:prose-lg" v-html="$page.markdownPage.content" />
 
 				<div class="mt-12">
 					<NextPrevLinks />

@@ -19,8 +19,9 @@
 							'flex items-center',
 							'py-1 px-3 mb-1 rounded',
 							'font-medium',
-							'hover:text-on-sidebar-hover',
+							'text-on-sidebar hover:text-on-sidebar-hover',
 							'focus:outline-none focus:shadow-focus',
+							'transition-colors duration-200',
 							...(currentPage.path === page.path
 								? [
 										//
