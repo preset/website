@@ -15,7 +15,7 @@
 					'py-3 pl-12 pr-4',
 					'rounded-lg',
 					'bg-navigation text-on-navigation',
-					'transition-colors duration-200',
+					'transition-colors duration-100',
 				]"
 				placeholder="Search the documentation (Ctrl + K)"
 				@focus="focused = true"
@@ -55,7 +55,7 @@
 					:key="result.path + result.anchor"
 					@mouseenter="focusIndex = index"
 					@mousedown="go"
-					class="border-on-navigation-muted"
+					class="transition-none border-on-navigation-muted"
 					:class="{
 						'border-b': index + 1 !== results.length,
 					}"
@@ -64,17 +64,18 @@
 						:to="result.path + result.anchor"
 						:class="[
 							...[focusIndex === index ? 'bg-navigation-hover text-brand' : []],
+							'transition-none',
 							'rounded block px-3 py-2 my-2 -mx-2',
 							'text-base font-bold',
 						]"
 					>
-						<span v-if="result.value === result.title">
+						<span v-if="result.value === result.title" class="transition-none">
 							{{ result.value }}
 						</span>
 
-						<span v-else class="flex items-center">
+						<span v-else class="flex items-center transition-none">
 							{{ result.title }}
-							<icon :icon="icons.chevronRight" class="mx-2 text-2xl" />
+							<icon :icon="icons.chevronRight" class="mx-2 text-2xl transition-none" />
 							<span class="font-normal opacity-75">{{ result.value }}</span>
 						</span>
 					</g-link>
