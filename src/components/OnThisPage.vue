@@ -109,7 +109,7 @@ export default {
 		},
 
 		registerSmoothScroll() {
-			const links = document.querySelectorAll('.on-this-page a');
+			const links = document.querySelectorAll('.on-this-page a, .prose a[href^="#"]');
 
 			for (const link of links) {
 				link.addEventListener('click', (e) => {

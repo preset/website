@@ -45,6 +45,9 @@ module.exports = {
 						'thead, tbody tr': {
 							borderBottomColor: theme('colors.on-background-muted.default'),
 						},
+						'h1, h2, h3, h4': {
+							color: theme('colors.brand.default'),
+						},
 						code: {
 							color: theme('colors.on-background.default'),
 							borderRadius: theme('borderRadius.default'),
@@ -65,8 +68,8 @@ module.exports = {
 		},
 	},
 	variants: {
-		boxShadow: ['focus'],
-		typography: ['responsive', 'dark'],
+		boxShadow: ['focus', 'focus-visible'],
+		typography: ['responsive'],
 	},
 	plugins: [
 		//

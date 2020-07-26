@@ -197,5 +197,9 @@ export default {
 
 * {
 	@apply transition-colors duration-200;
+
+	&::selection {
+		@apply bg-brand;
+	}
 }
 </style>

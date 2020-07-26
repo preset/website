@@ -20,7 +20,7 @@
 							'py-1 px-3 mb-1 rounded',
 							'font-medium',
 							'text-on-sidebar hover:text-on-sidebar-hover',
-							'focus:outline-none focus:shadow-focus',
+							'focus:outline-none focus:shadow-none focus:text-on-sidebar-hover focus-visible:shadow-focus',
 							'transition-colors duration-200',
 							...(currentPage.path === page.path
 								? [
