@@ -16,6 +16,7 @@
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/transformer-remark": "^0.5.0",
 		"@iconify/vue": "^1.0.2",
+		"@tailwindcss/typography": "^0.2.0",
 		"fuse.js": "^3.4.6",
 		"postcss-font-magician": "^2.3.1",
 		"postcss-nested": "^4.2.3",
