@@ -1,69 +1,76 @@
 <template>
-  <button @click="handleClick" aria-label="Toggle Darkmode" title="Toggle Darkmode">
-    <slot :dark="isDarkMode" />
-  </button>
+	<button
+		@click="toggleTheme"
+		:title="isLightTheme ? 'Turn off the god damn light' : 'I wanna see how it looks like when it\'s bright'"
+	>
+		<slot :dark="isDark" :light="isLight" :theme="theme" :setTheme="setTheme" />
+	</button>
 </template>
 
 <script>
-export const LIGHTS_OUT = 'lights-out';
+export const THEME_KEY = 'theme';
+export const DEFAULT_THEME = 'dark';
 
 export default {
-  data() {
-    return {
-      isDarkMode: false
-    }
-  },
+	data() {
+		return {
+			theme: DEFAULT_THEME,
+		};
+	},
 
-  methods: {
-    handleClick() {
-      const hasDarkMode = document.documentElement.hasAttribute(LIGHTS_OUT);
+	computed: {
+		isDark() {
+			return this.theme === 'dark';
+		},
+		isLight() {
+			return this.theme === 'light';
+		},
+	},
 
-      // Toggle dark mode on click.
-      return this.toggleDarkMode(! hasDarkMode);
-    },
+	methods: {
+		toggleTheme() {
+			this.setTheme(this.isDark ? 'light' : this.isLight ? 'dark' : this.theme);
+		},
 
-    toggleDarkMode(shouldBeDark) {
-      document.documentElement.toggleAttribute(LIGHTS_OUT, shouldBeDark);
+		setTheme(theme) {
+			this.writeToStorage(theme);
+			this.theme = theme;
 
-      this.isDarkMode = shouldBeDark;
+			document.querySelector('body').dataset.theme = theme;
 
-      this.writeToStorage(shouldBeDark);
+			return theme;
+		},
 
-      return shouldBeDark;
-    },
+		detectPrefered() {
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
 
-    detectPrefered() {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    },
+			return prefersDark ? 'dark' : prefersLight ? 'light' : this.theme;
+		},
 
-    hasInStorage() {
-      const check = localStorage.getItem(LIGHTS_OUT);
+		hasInStorage() {
+			return Boolean(localStorage.getItem(THEME_KEY));
+		},
 
-      return check !== null;
-    },
+		writeToStorage(themeName) {
+			localStorage.setItem(THEME_KEY, themeName);
+		},
 
-    writeToStorage(prefersDark) {
-      localStorage.setItem(LIGHTS_OUT, prefersDark ? 'true' : 'false');
-    },
+		getFromStorage() {
+			return localStorage.getItem(THEME_KEY);
+		},
+	},
 
-    getFromStorage() {
-      return localStorage.getItem(LIGHTS_OUT) === 'true' ? true : false;
-    }
-  },
+	mounted() {
+		if (this.hasInStorage()) {
+			this.setTheme(this.getFromStorage());
+			return;
+		}
 
-  mounted() {
-    if (this.hasInStorage()) {
-      this.toggleDarkMode(
-        this.getFromStorage()
-      );
-    } else if (process.isClient && window.matchMedia) {
-      this.toggleDarkMode(
-        this.detectPrefered()
-      );
-    }
-  }
+		if (process.isClient && window.matchMedia) {
+			this.setTheme(this.detectPrefered());
+			return;
+		}
+	},
 };
 </script>
-
-<style>
-</style>

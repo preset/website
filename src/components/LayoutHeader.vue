@@ -1,28 +1,21 @@
 <template>
-	<div class="py-2 border-t-2 border-ui-primary">
+	<div class="py-2 border-t-2 border-brand">
 		<div class="container">
 			<div class="flex items-center justify-between -mx-2 sm:-mx-4">
-				<div
-					class="flex flex-col items-center px-2 mr-auto sm:px-4 sm:flex-row"
-				>
-					<g-link to="/" class="flex items-center text-ui-primary" title="Home">
-						<Logo :width="40" class="text-ui-primary" />
-						<span
-							class="hidden ml-2 text-xl font-black tracking-tighter uppercase sm:block"
-						>
+				<div class="flex flex-col items-center px-2 mr-auto sm:px-4 sm:flex-row">
+					<g-link to="/" class="flex items-center text-brand" title="Home">
+						<Logo :width="40" class="text-brand" />
+						<span class="hidden ml-2 text-xl font-black tracking-tighter uppercase sm:block">
 							{{ meta.siteName }}
 						</span>
 					</g-link>
 
-					<div
-						v-if="settings.nav.links.length > 0"
-						class="hidden ml-2 mr-5 sm:block sm:ml-8"
-					>
+					<div v-if="settings.nav.links.length > 0" class="hidden ml-2 mr-5 sm:block sm:ml-8">
 						<g-link
 							v-for="link in settings.nav.links"
 							:key="link.path"
 							:to="link.path"
-							class="block p-1 font-medium nav-link text-ui-typo hover:text-ui-primary"
+							class="block p-1 font-medium nav-link text-on-background hover:text-brand"
 						>
 							{{ link.title }}
 						</g-link>
@@ -73,9 +66,9 @@
 					</a>
 
 					<ToggleDarkMode class="ml-2 sm:ml-8">
-						<template slot="default" slot-scope="{ dark }">
+						<template slot="default" slot-scope="{ dark, light }">
 							<MoonIcon v-if="dark" size="1.5x" />
-							<SunIcon v-else size="1.5x" />
+							<SunIcon v-if="light" size="1.5x" />
 						</template>
 					</ToggleDarkMode>
 				</div>
@@ -106,18 +99,10 @@ query {
 <script>
 import ToggleDarkMode from '@/components/ToggleDarkMode';
 import Logo from '@/components/Logo';
-import {
-	SunIcon,
-	MoonIcon,
-	GlobeIcon,
-	GithubIcon,
-	TwitterIcon,
-} from 'vue-feather-icons';
+import { SunIcon, MoonIcon, GlobeIcon, GithubIcon, TwitterIcon } from 'vue-feather-icons';
 
 const Search = () =>
-	import(/* webpackChunkName: "search" */ '@/components/Search').catch(error =>
-		console.warn(error),
-	);
+	import(/* webpackChunkName: "search" */ '@/components/Search').catch((error) => console.warn(error));
 
 export default {
 	components: {
@@ -146,14 +131,14 @@ export default {
 header {
 	svg:not(.feather-search) {
 		&:hover {
-			@apply text-ui-primary;
+			@apply text-brand;
 		}
 	}
 }
 
 .nav-link {
 	&.active {
-		@apply text-ui-primary font-bold border-ui-primary;
+		@apply text-brand font-bold border-brand;
 	}
 }
 </style>

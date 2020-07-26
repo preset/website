@@ -1,16 +1,16 @@
 <template>
-	<div class="font-sans antialiased text-ui-typo bg-ui-background">
+	<div class="font-sans antialiased text-on-background bg-background">
 		<div class="flex flex-col justify-start min-h-screen">
 			<header
 				ref="header"
-				class="sticky top-0 z-10 w-full border-b bg-ui-background border-ui-border"
+				class="sticky top-0 z-10 w-full border-b bg-background border-border"
 				@resize="setHeaderHeight"
 			>
 				<LayoutHeader />
 			</header>
 
 			<main
-				class="container relative flex flex-wrap justify-start flex-1 w-full bg-ui-background"
+				class="container relative flex flex-wrap justify-start flex-1 w-full bg-background"
 			>
 				<aside
 					v-if="hasSidebar"
@@ -18,7 +18,7 @@
 					:class="{ open: sidebarOpen }"
 					:style="sidebarStyle"
 				>
-					<div class="w-full pb-16 bg-ui-background">
+					<div class="w-full pb-16 bg-background">
 						<Sidebar @navigate="sidebarOpen = false" />
 					</div>
 				</aside>
@@ -34,7 +34,7 @@
 
 		<div v-if="hasSidebar" class="fixed bottom-0 right-0 z-50 p-8 lg:hidden">
 			<button
-				class="p-3 text-white rounded-full shadow-lg bg-ui-primary hover:text-white"
+				class="p-3 text-white rounded-full shadow-lg bg-brand hover:text-white"
 				@click="sidebarOpen = !sidebarOpen"
 			>
 				<XIcon v-if="sidebarOpen" />
@@ -126,27 +126,6 @@ export default {
 </script>
 
 <style lang="postcss">
-:root {
-	--color-ui-background: theme('colors.white');
-	--color-ui-typo: theme('colors.gray.700');
-	--color-ui-sidebar: theme('colors.gray.200');
-	--color-ui-border: theme('colors.gray.300');
-	--color-ui-primary: theme('colors.indigo.600');
-}
-
-html[lights-out] {
-	--color-ui-background: theme('colors.gray.900');
-	--color-ui-typo: theme('colors.gray.100');
-	--color-ui-sidebar: theme('colors.gray.800');
-	--color-ui-border: theme('colors.gray.800');
-	--color-ui-primary: theme('colors.indigo.500');
-
-	pre[class*='language-'],
-	code[class*='language-'] {
-		@apply bg-ui-border;
-	}
-}
-
 * {
 	transition-property: color, background-color, border-color;
 	transition-duration: 200ms;
@@ -157,7 +136,7 @@ h1,
 h2,
 h3,
 h4 {
-	@apply leading-snug font-black mb-4 text-ui-typo;
+	@apply leading-snug font-black mb-4 text-on-background;
 
 	&:hover {
 		a::before {
@@ -170,7 +149,7 @@ h4 {
 			content: '#';
 			margin-left: -1em;
 			padding-right: 1em;
-			@apply text-ui-primary absolute opacity-0 float-left;
+			@apply text-brand absolute opacity-0 float-left;
 		}
 	}
 }
@@ -191,8 +170,8 @@ h4 {
 	@apply text-lg;
 }
 
-a:not(.active):not(.text-ui-primary):not(.text-white) {
-	@apply text-ui-typo;
+a:not(.active):not(.text-brand):not(.text-white) {
+	@apply text-on-background;
 }
 
 p,
@@ -201,12 +180,12 @@ ul,
 pre,
 strong,
 blockquote {
-	@apply mb-4 text-base text-ui-typo;
+	@apply mb-4 text-base text-on-background;
 }
 
 .content {
 	a {
-		@apply text-ui-primary underline;
+		@apply text-brand underline;
 	}
 
 	h1,
@@ -226,7 +205,7 @@ blockquote {
 
 	h2,
 	h3 {
-		@apply border-b border-ui-border pb-1 mb-3;
+		@apply border-b border-border pb-1 mb-3;
 	}
 
 	ul {
@@ -260,7 +239,7 @@ blockquote {
 }
 
 blockquote {
-	@apply border-l-4 border-ui-border py-2 pl-4;
+	@apply border-l-4 border-border py-2 pl-4;
 
 	p:last-child {
 		@apply mb-0;
@@ -268,7 +247,7 @@ blockquote {
 }
 
 code {
-	@apply px-1 py-1 text-ui-typo bg-ui-sidebar font-mono border-b border-r border-ui-border text-sm rounded;
+	@apply px-1 py-1 text-on-background bg-sidebar font-mono border-b border-r border-border text-sm rounded;
 }
 
 pre[class*='language-'] {
@@ -303,7 +282,7 @@ table {
 	}
 
 	tr {
-		@apply border-b border-ui-border;
+		@apply border-b border-border;
 		&:last-child {
 			@apply border-b-0;
 		}
@@ -311,7 +290,7 @@ table {
 }
 
 .sidebar {
-	@apply fixed bg-ui-background px-4 inset-x-0 bottom-0 w-full border-r border-ui-border overflow-y-auto transition-all z-40;
+	@apply fixed bg-background px-4 inset-x-0 bottom-0 w-full border-r border-border overflow-y-auto transition-all z-40;
 	transform: translateX(-100%);
 
 	&.open {
@@ -319,7 +298,7 @@ table {
 	}
 
 	@screen lg {
-		@apply w-1/4 px-0 bg-transparent top-0 bottom-auto inset-x-auto sticky z-0;
+		@apply w-1/4 px-0 top-0 bottom-auto inset-x-auto sticky z-0;
 		transform: translateX(0);
 	}
 }
