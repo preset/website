@@ -5,18 +5,22 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-	siteName: 'Docc',
+	siteName: process.env.SITE_NAME,
 	icon: {
 		favicon: './src/assets/favicon.png',
 		touchicon: './src/assets/favicon.png',
 	},
-	siteUrl: process.env.SITE_URL ? process.env.SITE_URL : 'https://example.com',
+	siteUrl: process.env.SITE_URL,
 	settings: {
-		web: process.env.URL_WEB || false,
-		twitter: process.env.URL_TWITTER || false,
-		github: process.env.URL_GITHUB || false,
-		nav: {
-			links: [{ path: '/docs/', title: 'Docs' }],
+		twitter: {
+			name: 'Twitter',
+			title: 'Visit my Twitter',
+			url: process.env.TWITTER_URL || false,
+		},
+		github: {
+			name: 'Github',
+			title: 'Visit the repositories',
+			url: process.env.GITHUB_URL || false,
 		},
 		sidebar: [
 			{
@@ -50,19 +54,21 @@ module.exports = {
 		},
 
 		{
-			use: 'gridsome-plugin-tailwindcss',
-			options: {
-				tailwindConfig: './tailwind.config.js',
-				purgeConfig: {
-					// Prevent purging of prism classes.
-					whitelistPatternsChildren: [/token$/],
-				},
-			},
-		},
-
-		{
 			use: '@gridsome/plugin-sitemap',
 			options: {},
 		},
 	],
+
+	css: {
+		loaderOptions: {
+			postcss: {
+				plugins: [
+					//
+					require('tailwindcss'),
+					require('postcss-nested'),
+					require('postcss-font-magician'),
+				],
+			},
+		},
+	},
 };

@@ -1,11 +1,17 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
+	purge: {
+		content: ['./src/**/*.vue', './src/**/*.md'],
+		options: {
+			whitelistPatterns: [/token$/],
+		},
+	},
+
 	theme: {
 		extend: {
-			spacing: {
-				sm: '24rem',
-			},
-			screens: {
-				xxl: '1400px',
+			fontFamily: {
+				sans: ['Inter var', ...fontFamily.sans],
 			},
 		},
 		container: {
@@ -13,7 +19,9 @@ module.exports = {
 			padding: '1rem',
 		},
 	},
-	variants: {},
+	variants: {
+		boxShadow: ['focus'],
+	},
 	plugins: [
 		//
 		require('tailwindcss-theming'),

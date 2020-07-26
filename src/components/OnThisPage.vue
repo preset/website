@@ -1,39 +1,36 @@
 <template>
-	<div
-		class="mt-8 sm:pl-4 md:pl-6 md:pt-12 lg:pl-8 sm:pb-16 sm:border-l border-border md:mt-0"
-	>
-		<h3 class="pt-0 mt-0 text-sm tracking-wide uppercase border-none">
+	<div class="mt-8 sm:pl-4 md:pl-6 md:pt-12 lg:pl-8 sm:pb-16 md:mt-0">
+		<h1 class="mb-2 text-sm font-bold tracking-tight uppercase text-on-sidebar-header">
 			On this page
-		</h3>
+		</h1>
 		<div>
 			<ul>
 				<li
-					v-for="(heading, index) in headings"
+					v-for="heading in headings"
 					:key="`${page.path}${heading.anchor}`"
+					class="text-on-sidebar-header"
 					:class="{
-						'border-t border-dashed border-border pt-2 mt-2':
-							index > 0 && heading.depth === 2,
-						'font-semibold': heading.depth === 2,
+						'font-medium': heading.depth === 2,
 						[`depth-${heading.depth}`]: true,
 					}"
 				>
 					<g-link
 						:to="`${page.path}${heading.anchor}`"
-						class="relative flex items-center py-1 text-sm transition transform hover:translate-x-1"
-						:class="{
-							'pl-2': heading.depth === 3,
-							'pl-3': heading.depth === 4,
-							'pl-4': heading.depth === 5,
-							'pl-5': heading.depth === 6,
-							'font-bold text-brand': activeAnchor === heading.anchor,
-						}"
+						:class="[
+							'relative',
+							'py-1',
+							'rounded text-sm',
+							'flex items-center',
+							'transition-all duration-200',
+							'transform hover:translate-x-1',
+							'focus:shadow-none focus:text-on-sidebar',
+							heading.depth === 3 ? 'pl-2' : '',
+							heading.depth === 4 ? 'pl-3' : '',
+							heading.depth === 5 ? 'pl-4' : '',
+							heading.depth === 6 ? 'pl-5' : '',
+							activeAnchor === heading.anchor ? 'font-bold text-brand' : '',
+						]"
 					>
-						<span
-							class="absolute w-2 h-2 -ml-3 rounded-full opacity-0 bg-brand transition transform scale-0 origin-center"
-							:class="{
-								'opacity-100 scale-100': activeAnchor === heading.anchor,
-							}"
-						></span>
 						{{ heading.value }}
 					</g-link>
 				</li>
@@ -56,7 +53,7 @@ export default {
 			return this.$page.markdownPage;
 		},
 		headings() {
-			return this.page.headings.filter(h => h.depth > 1);
+			return this.page.headings.filter((h) => h.depth > 1);
 		},
 	},
 
@@ -103,9 +100,7 @@ export default {
 				threshold: 1,
 			});
 
-			const elements = document.querySelectorAll(
-				'.content h2, .content h3, .content h4, .content h5, .content h6',
-			);
+			const elements = document.querySelectorAll('.content h2, .content h3, .content h4, .content h5, .content h6');
 
 			for (let i = 0; i < elements.length; i++) {
 				this.observer.observe(elements[i]);

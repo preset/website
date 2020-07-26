@@ -7,6 +7,7 @@
 		"explore": "gridsome explore"
 	},
 	"dependencies": {
+		"@iconify/icons-bx": "^1.0.3",
 		"gridsome": "^0.7.0"
 	},
 	"devDependencies": {
@@ -14,8 +15,10 @@
 		"@gridsome/remark-prismjs": "^0.3.0",
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/transformer-remark": "^0.5.0",
+		"@iconify/vue": "^1.0.2",
 		"fuse.js": "^3.4.6",
-		"gridsome-plugin-tailwindcss": "^2.2.36",
+		"postcss-font-magician": "^2.3.1",
+		"postcss-nested": "^4.2.3",
 		"prism-themes": "^1.3.0",
 		"tailwindcss": "^1.2.0",
 		"tailwindcss-theming": "^3.0.0-beta.1",

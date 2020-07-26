@@ -1,8 +1,5 @@
 <template>
-	<button
-		@click="toggleTheme"
-		:title="isLightTheme ? 'Turn off the god damn light' : 'I wanna see how it looks like when it\'s bright'"
-	>
+	<button @click="toggleTheme" :title="title">
 		<slot :dark="isDark" :light="isLight" :theme="theme" :setTheme="setTheme" />
 	</button>
 </template>
@@ -19,6 +16,9 @@ export default {
 	},
 
 	computed: {
+		title() {
+			return this.isLight ? 'Errr my eyes help ;-;' : this.isDark ? 'Lumos Maxima!' : 'Change the theme';
+		},
 		isDark() {
 			return this.theme === 'dark';
 		},

@@ -1,24 +1,23 @@
 <template>
-	<div
-		@keydown.down="increment"
-		@keydown.up="decrement"
-		@keydown.enter="go"
-		class="relative"
-	>
+	<div @keydown.down="increment" @keydown.up="decrement" @keydown.enter="go" class="relative">
 		<label class="relative block">
-			<span class="sr-only">Search Documentation</span>
-			<div
-				class="absolute inset-y-0 left-0 flex items-center justify-center px-3 py-2 opacity-50"
-			>
-				<SearchIcon size="1.25x" class="text-on-background" />
+			<span class="sr-only">Search the documentation</span>
+			<div class="absolute inset-y-0 left-0 flex items-center justify-center px-4 py-2 opacity-50">
+				<icon :icon="icons.search" class="text-xl text-on-background" />
 			</div>
 			<input
 				ref="input"
-				type="search"
+				type="text"
 				:value="query"
-				class="block w-full py-2 pl-10 pr-4 border-2 rounded-lg bg-sidebar border-sidebar focus:bg-background"
-				:class="{ 'rounded-b-none': showResult }"
-				placeholder="Search Documentation..."
+				:class="[
+					...[showResult ? 'rounded-b-none' : []],
+					'block w-full',
+					'py-3 pl-12 pr-4',
+					'rounded-lg',
+					'bg-navigation text-on-navigation',
+					'transition-colors duration-200',
+				]"
+				placeholder="Search the documentation (Ctrl + K)"
 				@focus="focused = true"
 				@blur="focused = false"
 				@input="
@@ -28,15 +27,26 @@
 				@change="query = $event.target.value"
 			/>
 		</label>
-		<div
+		<nav
 			v-if="showResult"
-			class="fixed inset-x-0 z-50 overflow-y-auto border-2 border-t-0 rounded-lg rounded-t-none shadow-lg results bg-background bottom:0 sm:bottom-auto sm:absolute border-sidebar"
 			style="max-height: calc(100vh - 120px)"
+			:class="[
+				'results',
+				'fixed z-50 inset-x-0 bottom-0',
+				'overflox-y-auto',
+				'shadow-md rounded-md rounded-t-none',
+				'bg-navigation text-on-navigation',
+				'sm:bottom-auto sm:absolute',
+			]"
 		>
-			<ul class="px-4 py-2 m-0">
+			<ul class="px-4 py-0 m-0" :class="{ 'py-4': results.length === 0 }">
 				<li v-if="results.length === 0" class="px-2">
-					No results for <span class="font-bold">{{ query }}</span
-					>.
+					<span v-if="query.length === 0">Type something to search the documentation.</span>
+					<span v-else>
+						No results for
+						<span class="font-medium text-brand">{{ query }}</span>
+						<span>.</span>
+					</span>
 				</li>
 
 				<li
@@ -45,17 +55,18 @@
 					:key="result.path + result.anchor"
 					@mouseenter="focusIndex = index"
 					@mousedown="go"
-					class="border-sidebar"
+					class="border-on-navigation-muted"
 					:class="{
 						'border-b': index + 1 !== results.length,
 					}"
 				>
 					<g-link
 						:to="result.path + result.anchor"
-						class="block p-2 -mx-2 text-base font-bold rounded-lg"
-						:class="{
-							'bg-sidebar text-brand': focusIndex === index,
-						}"
+						:class="[
+							...[focusIndex === index ? 'bg-navigation-hover text-brand' : []],
+							'rounded block px-3 py-2 my-2 -mx-2',
+							'text-base font-bold',
+						]"
 					>
 						<span v-if="result.value === result.title">
 							{{ result.value }}
@@ -63,13 +74,13 @@
 
 						<span v-else class="flex items-center">
 							{{ result.title }}
-							<ChevronRightIcon size="1x" class="mx-1" />
+							<icon :icon="icons.chevronRight" class="mx-2 text-2xl" />
 							<span class="font-normal opacity-75">{{ result.value }}</span>
 						</span>
 					</g-link>
 				</li>
 			</ul>
-		</div>
+		</nav>
 	</div>
 </template>
 
@@ -94,21 +105,25 @@ query Search {
 
 <script>
 import Fuse from 'fuse.js';
-import { ChevronRightIcon, SearchIcon } from 'vue-feather-icons';
+import Icon from '@iconify/vue';
+import search from '@iconify/icons-bx/bx-search';
+import chevronRight from '@iconify/icons-bx/bx-chevron-right';
 
 export default {
 	components: {
-		ChevronRightIcon,
-		SearchIcon,
+		Icon,
 	},
 
-	data() {
-		return {
-			query: '',
-			focusIndex: -1,
-			focused: false,
-		};
-	},
+	data: () => ({
+		query: '',
+		focusIndex: -1,
+		focused: false,
+		icons: {
+			search,
+			chevronRight,
+		},
+	}),
+
 	computed: {
 		results() {
 			const fuse = new Fuse(this.headings, {
@@ -120,13 +135,11 @@ export default {
 		},
 		headings() {
 			let result = [];
-			const allPages = this.$static.allMarkdownPage.edges.map(
-				edge => edge.node,
-			);
+			const allPages = this.$static.allMarkdownPage.edges.map((edge) => edge.node);
 
 			// Create the array of all headings of all pages.
-			allPages.forEach(page => {
-				page.headings.forEach(heading => {
+			allPages.forEach((page) => {
+				page.headings.forEach((heading) => {
 					result.push({
 						...heading,
 						path: page.path,
@@ -177,5 +190,3 @@ export default {
 	},
 };
 </script>
-
-<style></style>

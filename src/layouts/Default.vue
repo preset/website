@@ -1,44 +1,69 @@
 <template>
-	<div class="font-sans antialiased text-on-background bg-background">
+	<div class="font-sans antialiased transition-colors duration-200 bg-background text-on-background">
 		<div class="flex flex-col justify-start min-h-screen">
-			<header
-				ref="header"
-				class="sticky top-0 z-10 w-full border-b bg-background border-border"
-				@resize="setHeaderHeight"
-			>
-				<LayoutHeader />
+			<!-- Header -->
+			<header ref="header" class="sticky top-0 z-10 w-full bg-background" @resize="setHeaderHeight">
+				<layout-header />
 			</header>
 
+			<!-- Main layout -->
 			<main
-				class="container relative flex flex-wrap justify-start flex-1 w-full bg-background"
+				role="main"
+				:class="[
+					'px-6 sm:px-0',
+					'container w-full',
+					'relative',
+					'flex flex-wrap justify-start flex-1',
+					'transition-colors duration-200',
+					'bg-background text-on-background',
+				]"
 			>
+				<!-- Sidebar -->
 				<aside
 					v-if="hasSidebar"
-					class="sidebar"
-					:class="{ open: sidebarOpen }"
+					class="fixed"
 					:style="sidebarStyle"
+					:class="[
+						'fixed px-4 inset-x-0 bottom-0 w-full overflow-y-auto transition-all z-40',
+						'text-on-background bg-background',
+						'transition-all duration-200',
+						'transform',
+						'lg:w-3/12 lg:px-0 lg:top-0 lg:bottom-auto lg:inset-x-auto lg:sticky lg:z-0 lg:translate-x-0',
+						sidebarOpen ? 'translate-x-0' : '-translate-x-full',
+					]"
 				>
-					<div class="w-full pb-16 bg-background">
-						<Sidebar @navigate="sidebarOpen = false" />
+					<div
+						:class="[
+							'w-full pb-16',
+							'transition-colors duration-200',
+							'md:w-3/4 md:mx-auto lg:w-full',
+							'bg-background text-on-background',
+						]"
+					>
+						<sidebar @navigate="sidebarOpen = false" />
 					</div>
 				</aside>
 
-				<div
-					class="w-full pb-24"
-					:class="{ 'pl-0 lg:pl-12 lg:w-3/4': hasSidebar }"
-				>
+				<!-- Content -->
+				<div class="w-full pb-24" :class="{ 'pl-0 lg:pl-12 lg:w-3/4': hasSidebar }">
 					<slot />
 				</div>
 			</main>
 		</div>
 
+		<!-- Mobile sidebar button -->
 		<div v-if="hasSidebar" class="fixed bottom-0 right-0 z-50 p-8 lg:hidden">
 			<button
-				class="p-3 text-white rounded-full shadow-lg bg-brand hover:text-white"
+				class="p-0 rounded-full shadow-md bg-navigation text-on-navigation"
+				:class="[
+					'p-3 rounded-full shadow-md',
+					'bg-navigation text-on-navigation',
+					'focus:outline-none focus:shadow-focus',
+				]"
 				@click="sidebarOpen = !sidebarOpen"
 			>
-				<XIcon v-if="sidebarOpen" />
-				<MenuIcon v-else />
+				<icon v-if="sidebarOpen" :icon="icons.cross" class="text-2xl" />
+				<icon v-else :icon="icons.menu" class="text-2xl" />
 			</button>
 		</div>
 	</div>
@@ -55,19 +80,24 @@ query {
 <script>
 import Sidebar from '@/components/Sidebar';
 import LayoutHeader from '@/components/LayoutHeader';
-import { MenuIcon, XIcon } from 'vue-feather-icons';
+import Icon from '@iconify/vue';
+import menu from '@iconify/icons-bx/bx-menu';
+import cross from '@iconify/icons-bx/bx-x';
 
 export default {
 	components: {
+		Icon,
 		Sidebar,
 		LayoutHeader,
-		MenuIcon,
-		XIcon,
 	},
 	data() {
 		return {
 			headerHeight: 0,
 			sidebarOpen: false,
+			icons: {
+				menu,
+				cross,
+			},
 		};
 	},
 	watch: {
@@ -100,6 +130,11 @@ export default {
 		return {
 			meta: [
 				{
+					rel: 'preconnect',
+					href: 'https://fonts.gstatic.com/',
+					crossorigin: true,
+				},
+				{
 					key: 'og:type',
 					name: 'og:type',
 					content: 'website',
@@ -126,180 +161,37 @@ export default {
 </script>
 
 <style lang="postcss">
-* {
-	transition-property: color, background-color, border-color;
-	transition-duration: 200ms;
-	transition-timing-function: ease-in-out;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 900;
+	font-style: normal;
+	font-named-instance: 'Regular';
+	font-display: swap;
+	src: url('https://rsms.me/inter/font-files/Inter.var.woff2?3.13') format('woff2');
 }
 
-h1,
-h2,
-h3,
-h4 {
-	@apply leading-snug font-black mb-4 text-on-background;
-
-	&:hover {
-		a::before {
-			@apply opacity-100;
-		}
-	}
-
-	a {
-		&::before {
-			content: '#';
-			margin-left: -1em;
-			padding-right: 1em;
-			@apply text-brand absolute opacity-0 float-left;
-		}
-	}
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 900;
+	font-style: italic;
+	font-named-instance: 'Italic';
+	font-display: swap;
+	src: url('https://rsms.me/inter/font-files/Inter-italic.var.woff2?3.13') format('woff2');
 }
 
-h1 {
-	@apply text-4xl;
+:root {
+	font-size: 15px;
 }
 
-h2 {
-	@apply text-2xl;
+@screen lg {
+	font-size: 16px;
 }
 
-h3 {
-	@apply text-xl;
-}
-
-h4 {
-	@apply text-lg;
-}
-
-a:not(.active):not(.text-brand):not(.text-white) {
-	@apply text-on-background;
-}
-
-p,
-ol,
-ul,
-pre,
-strong,
-blockquote {
-	@apply mb-4 text-base text-on-background;
-}
-
-.content {
-	a {
-		@apply text-brand underline;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply -mt-12 pt-20;
-	}
-
-	h2 + h3,
-	h2 + h2,
-	h3 + h3 {
-		@apply border-none -mt-20;
-	}
-
-	h2,
-	h3 {
-		@apply border-b border-border pb-1 mb-3;
-	}
-
-	ul {
-		@apply list-disc;
-
-		ul {
-			list-style: circle;
-		}
-	}
-
-	ol {
-		@apply list-decimal;
-	}
-
-	ol,
-	ul {
-		@apply pl-5 py-1;
-
-		li {
-			@apply mb-2;
-
-			p {
-				@apply mb-0;
-			}
-
-			&:last-child {
-				@apply mb-0;
-			}
-		}
-	}
-}
-
-blockquote {
-	@apply border-l-4 border-border py-2 pl-4;
-
-	p:last-child {
-		@apply mb-0;
-	}
-}
-
-code {
-	@apply px-1 py-1 text-on-background bg-sidebar font-mono border-b border-r border-border text-sm rounded;
-}
-
-pre[class*='language-'] {
-	@apply max-w-full overflow-x-auto rounded;
-
-	& + p {
-		@apply mt-4;
-	}
-
-	& > code[class*='language-'] {
-		@apply border-none leading-relaxed;
-	}
-}
-
-header {
-	background-color: rgba(255, 255, 255, 0.9);
-	backdrop-filter: blur(4px);
-}
-
-table {
-	@apply text-left mb-6;
-
-	td,
-	th {
-		@apply py-3 px-4;
-		&:first-child {
-			@apply pl-0;
-		}
-		&:last-child {
-			@apply pr-0;
-		}
-	}
-
-	tr {
-		@apply border-b border-border;
-		&:last-child {
-			@apply border-b-0;
-		}
-	}
-}
-
-.sidebar {
-	@apply fixed bg-background px-4 inset-x-0 bottom-0 w-full border-r border-border overflow-y-auto transition-all z-40;
-	transform: translateX(-100%);
-
-	&.open {
-		transform: translateX(0);
-	}
-
-	@screen lg {
-		@apply w-1/4 px-0 top-0 bottom-auto inset-x-auto sticky z-0;
-		transform: translateX(0);
-	}
+:focus {
+	@apply outline-none shadow-focus;
 }
 </style>
