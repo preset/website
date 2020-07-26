@@ -1,6 +1,7 @@
 ---
 description: ''
 sidebar: 'docs'
+prev: '/docs/installation/'
 next: '/docs/installation/'
 ---
 
