@@ -94,4 +94,24 @@ export default {
 
 <style>
 @import '~prism-themes/themes/prism-material-oceanic.css';
+
+h1,
+h2,
+h3,
+h4 {
+	&:hover {
+		a::before {
+			@apply opacity-100;
+		}
+	}
+
+	a {
+		&::before {
+			content: '#';
+			margin-left: -1em;
+			padding-right: 1em;
+			@apply text-brand-muted absolute opacity-0 float-left;
+		}
+	}
+}
 </style>

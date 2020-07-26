@@ -4,7 +4,7 @@
 			On this page
 		</h1>
 		<div>
-			<ul>
+			<ul class="on-this-page">
 				<li
 					v-for="heading in headings"
 					:key="`${page.path}${heading.anchor}`"
@@ -68,6 +68,7 @@ export default {
 
 			// And create another one for the next page.
 			this.$nextTick(this.initObserver);
+			this.$nextTick(this.registerSmoothScroll);
 		},
 	},
 
@@ -106,14 +107,42 @@ export default {
 				this.observer.observe(elements[i]);
 			}
 		},
+
+		registerSmoothScroll() {
+			const links = document.querySelectorAll('.on-this-page a');
+
+			for (const link of links) {
+				link.addEventListener('click', (e) => {
+					e.preventDefault();
+					this.scrollTo(e.target.getAttribute('href'));
+				});
+			}
+		},
+
+		scrollTo(href) {
+			if (!href.includes('#')) {
+				return;
+			}
+
+			const [_, hash] = href.split('#');
+			const offsetTop = document.querySelector(`#${hash}`).offsetTop;
+
+			scroll({
+				top: offsetTop - '25',
+				behavior: 'smooth',
+			});
+		},
 	},
 
 	mounted() {
 		if (process.isClient) {
 			if (window.location.hash) {
 				this.activeAnchor = window.location.hash;
+				this.$nextTick(() => this.scrollTo(window.location.hash));
 			}
+
 			this.$nextTick(this.initObserver);
+			this.$nextTick(this.registerSmoothScroll);
 		}
 	},
 };
