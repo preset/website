@@ -1,5 +1,5 @@
 <template>
-	<div class="mt-8 sm:pl-4 md:pl-6 md:pt-12 lg:pl-8 sm:pb-16 md:mt-0">
+	<div class="mt-8 sm:pl-4 md:pl-6 md:pt-12 lg:pl-8 sm:pb-16 md:mt-0" v-if="headings.length > 0">
 		<h1 class="mb-2 text-sm font-bold tracking-tight uppercase text-on-sidebar-header">
 			On this page
 		</h1>
