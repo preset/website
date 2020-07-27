@@ -10,7 +10,11 @@ import twitter from '@iconify/icons-bx/bxl-twitter';
 import github from '@iconify/icons-bx/bxl-github';
 import sunOutline from '@iconify/icons-bx/bx-sun';
 import sunSolid from '@iconify/icons-bx/bxs-sun';
+import leftArrow from '@iconify/icons-bx/bx-left-arrow-alt';
+import rightArrow from '@iconify/icons-bx/bx-right-arrow-alt';
 import close from '@iconify/icons-bx/bx-x';
+import search from '@iconify/icons-bx/bx-search';
+import chevronRight from '@iconify/icons-bx/bx-chevron-right';
 
 Object.entries({
 	menu,
@@ -20,6 +24,10 @@ Object.entries({
 	dark: sunOutline,
 	light: sunSolid,
 	close,
+	leftArrow,
+	rightArrow,
+	chevronRight,
+	search,
 }).forEach(([name, icon]) => Icon.addIcon(name, icon));
 
 export default {

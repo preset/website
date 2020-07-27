@@ -6,7 +6,7 @@
 					<article class="prose prose-dark lg:prose-lg " v-html="$page.markdownPage.content" />
 
 					<div class="mt-12">
-						<NextPrevLinks />
+						<bottom-page-links />
 					</div>
 				</div>
 			</div>
@@ -47,14 +47,14 @@ query ($id: ID!) {
 
 <script>
 import DocumentationLayout from '@/layouts/Documentation';
-import OnThisPage from '@/components/OnThisPage.vue';
-import NextPrevLinks from '@/components/NextPrevLinks.vue';
+import BottomPageLinks from '@/components/documentation/BottomPageLinks';
+import OnThisPage from '@/components/documentation/OnThisPage';
 
 export default {
 	components: {
 		DocumentationLayout,
+		BottomPageLinks,
 		OnThisPage,
-		NextPrevLinks,
 	},
 
 	metaInfo() {

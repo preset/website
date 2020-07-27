@@ -14,7 +14,7 @@
 					'transition-colors duration-200',
 				]"
 			>
-				<icon :icon="icons.leftArrow" class="mr-2 text-2xl" />
+				<icon icon="leftArrow" class="mr-2 text-2xl" />
 				{{ prev.title }}
 			</g-link>
 
@@ -32,26 +32,19 @@
 				]"
 			>
 				{{ next.title }}
-				<icon :icon="icons.rightArrow" class="ml-2 text-2xl" />
+				<icon icon="rightArrow" class="ml-2 text-2xl" />
 			</g-link>
 		</div>
 	</div>
 </template>
 
 <script>
-import { ArrowLeftIcon, ArrowRightIcon } from 'vue-feather-icons';
 import Icon from '@iconify/vue';
-import leftArrow from '@iconify/icons-bx/bx-left-arrow-alt';
-import rightArrow from '@iconify/icons-bx/bx-right-arrow-alt';
 
 export default {
 	components: {
 		Icon,
 	},
-
-	data: () => ({
-		icons: { leftArrow, rightArrow },
-	}),
 
 	computed: {
 		page() {

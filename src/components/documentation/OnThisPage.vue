@@ -41,12 +41,10 @@
 
 <script>
 export default {
-	data() {
-		return {
-			activeAnchor: '',
-			observer: null,
-		};
-	},
+	data: () => ({
+		activeAnchor: '',
+		observer: null,
+	}),
 
 	computed: {
 		page() {

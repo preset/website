@@ -3,7 +3,7 @@
 		<label class="relative block">
 			<span class="sr-only">Search the documentation</span>
 			<div class="absolute inset-y-0 left-0 flex items-center justify-center px-4 py-2 opacity-50">
-				<icon :icon="icons.search" class="text-xl text-on-background" />
+				<icon icon="search" class="text-xl text-on-background" />
 			</div>
 			<input
 				ref="input"
@@ -75,7 +75,7 @@
 
 						<span v-else class="flex items-center transition-none">
 							{{ result.title }}
-							<icon :icon="icons.chevronRight" class="mx-2 text-2xl transition-none" />
+							<icon icon="chevronRight" class="mx-2 text-2xl transition-none" />
 							<span class="font-normal opacity-75">{{ result.value }}</span>
 						</span>
 					</g-link>
@@ -107,8 +107,6 @@ query Search {
 <script>
 import Fuse from 'fuse.js';
 import Icon from '@iconify/vue';
-import search from '@iconify/icons-bx/bx-search';
-import chevronRight from '@iconify/icons-bx/bx-chevron-right';
 
 export default {
 	components: {
@@ -119,10 +117,6 @@ export default {
 		query: '',
 		focusIndex: -1,
 		focused: false,
-		icons: {
-			search,
-			chevronRight,
-		},
 	}),
 
 	computed: {
