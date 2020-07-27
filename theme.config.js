@@ -84,7 +84,7 @@ const dark = new Theme()
 			header: '#a0aec0',
 			hover: '#ffffff',
 		},
-		'on-brand': '#ffffff',
+		'on-brand': '#0c3286',
 		'on-button': {
 			default: '#829caf',
 			hover: '#cbd3ff',

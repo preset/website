@@ -17,7 +17,7 @@
 					'bg-navigation text-on-navigation',
 					'transition-colors duration-100',
 				]"
-				placeholder="Search the documentation (Ctrl + K)"
+				:placeholder="placeholder"
 				@focus="focused = true"
 				@blur="focused = false"
 				@input="
@@ -109,6 +109,7 @@ import Fuse from 'fuse.js';
 import Icon from '@iconify/vue';
 
 export default {
+	props: ['placeholder'],
 	components: {
 		Icon,
 	},

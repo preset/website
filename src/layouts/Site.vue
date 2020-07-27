@@ -8,8 +8,19 @@
 			'flex flex-col min-h-screen h-full',
 		]"
 	>
-		<site-header />
-		<slot class="flex-1" />
+		<site-header
+			:class="[
+				'fixed z-10 w-full',
+				'py-6',
+				'transition-colors duration-200',
+				'bg-background text-on-background',
+				'border-t-2 border-brand',
+			]"
+		/>
+
+		<div class="container flex flex-col flex-1 mx-auto mt-32 mb-40 md:px-4 md:flex-row">
+			<slot />
+		</div>
 	</main>
 </template>
 
@@ -22,46 +33,13 @@ query {
 </static-query>
 
 <script>
-import SiteHeader from '@/components/site/Header.vue';
+import SiteHeader from '@/components/site/Header';
+import Icon from '@/components/Icon';
 
 export default {
 	components: {
 		SiteHeader,
-	},
-
-	metaInfo() {
-		const title = 'Preset';
-		const description = 'A practical preset system that replace manual refactoring tasks.';
-
-		return {
-			title: title,
-			meta: [
-				{
-					name: 'description',
-					content: description,
-				},
-				{
-					key: 'og:title',
-					name: 'og:title',
-					content: title,
-				},
-				{
-					key: 'twitter:title',
-					name: 'twitter:title',
-					content: title,
-				},
-				{
-					key: 'og:description',
-					name: 'og:description',
-					content: description,
-				},
-				{
-					key: 'twitter:description',
-					name: 'twitter:description',
-					content: description,
-				},
-			],
-		};
+		Icon,
 	},
 };
 </script>

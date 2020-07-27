@@ -15,6 +15,7 @@ import rightArrow from '@iconify/icons-bx/bx-right-arrow-alt';
 import close from '@iconify/icons-bx/bx-x';
 import search from '@iconify/icons-bx/bx-search';
 import chevronRight from '@iconify/icons-bx/bx-chevron-right';
+import book from '@iconify/icons-bx/bxs-book-alt';
 
 Object.entries({
 	menu,
@@ -28,6 +29,7 @@ Object.entries({
 	rightArrow,
 	chevronRight,
 	search,
+	book,
 }).forEach(([name, icon]) => Icon.addIcon(name, icon));
 
 export default {

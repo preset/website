@@ -20,7 +20,7 @@
 				]"
 			>
 				<ClientOnly>
-					<Search class="w-full max-w-2xl md:mx-4" />
+					<Search class="w-full max-w-2xl md:mx-4" placeholder="Search the documentation (Ctrl + K)" />
 				</ClientOnly>
 			</div>
 
