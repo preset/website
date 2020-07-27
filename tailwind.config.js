@@ -16,6 +16,9 @@ module.exports = {
 			inset: {
 				18: '6.5rem',
 			},
+			width: {
+				sidebar: '20rem',
+			},
 		},
 
 		typography: (theme) => {

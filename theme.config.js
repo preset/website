@@ -5,6 +5,7 @@ const main = new Theme()
 	.setName('light')
 	.targetable()
 	.addColors({
+		transparent: 'transparent',
 		brand: {
 			default: '#4557b9',
 			muted: '#4556babf',
@@ -50,6 +51,7 @@ const dark = new Theme()
 	.setName('dark')
 	.targetable()
 	.addColors({
+		transparent: 'transparent',
 		brand: {
 			default: '#b0bcff',
 			muted: '#4556babf',
