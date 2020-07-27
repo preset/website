@@ -13,11 +13,11 @@ module.exports = {
 			fontFamily: {
 				sans: ['Inter var', ...fontFamily.sans],
 			},
+			inset: {
+				18: '6.5rem',
+			},
 		},
-		container: {
-			center: true,
-			padding: '1rem',
-		},
+
 		typography: (theme) => {
 			return {
 				default: {
@@ -67,10 +67,12 @@ module.exports = {
 			};
 		},
 	},
+
 	variants: {
-		boxShadow: ['focus', 'focus-visible'],
+		boxShadow: ['focus', 'responsive', 'focus-visible'],
 		typography: ['responsive'],
 	},
+
 	plugins: [
 		//
 		require('tailwindcss-theming'),

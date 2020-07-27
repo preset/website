@@ -1,8 +1,8 @@
 ---
 description: ''
 sidebar: 'docs'
-prev: '/docs/page2/'
-next: '/docs/page2/'
+prev: '/docs/installation/'
+next: '/docs/installation/'
 ---
 
 ## Hello world

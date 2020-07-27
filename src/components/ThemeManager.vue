@@ -1,6 +1,13 @@
 <template>
 	<button @click="toggleTheme" :title="title">
-		<slot :dark="isDark" :light="isLight" :theme="theme" :setTheme="setTheme" />
+		<slot
+			:dark="isDark"
+			:light="isLight"
+			:theme="theme"
+			:setTheme="setTheme"
+			:toggleTheme="toggleTheme"
+			:title="title"
+		/>
 	</button>
 </template>
 

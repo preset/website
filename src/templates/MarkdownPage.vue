@@ -1,19 +1,19 @@
 <template>
-	<Layout>
-		<div class="flex flex-wrap items-start justify-start">
-			<div class="sticky order-2 w-full md:w-1/3 sm:pl-4 md:pl-6 lg:pl-8" style="top: 4rem">
-				<OnThisPage />
-			</div>
+	<documentation-layout>
+		<section class="flex flex-col flex-wrap items-start justify-start px-8 lg:pl-0 md:flex-row">
+			<div class="order-1 w-full md:pr-16 md:w-3/4">
+				<div class="lg:pl-8 xl:pl-16">
+					<article class="prose prose-dark lg:prose-lg " v-html="$page.markdownPage.content" />
 
-			<div class="order-1 w-full md:w-2/3">
-				<div class="pt-10 prose prose-dark lg:prose-lg" v-html="$page.markdownPage.content" />
-
-				<div class="mt-12">
-					<NextPrevLinks />
+					<div class="mt-12">
+						<NextPrevLinks />
+					</div>
 				</div>
 			</div>
-		</div>
-	</Layout>
+
+			<on-this-page class="order-2 w-full mt-16 md:sticky md:w-1/4 md:top-18 md:mt-0" />
+		</section>
+	</documentation-layout>
 </template>
 
 <page-query>
@@ -46,11 +46,13 @@ query ($id: ID!) {
 </page-query>
 
 <script>
+import DocumentationLayout from '@/layouts/Documentation';
 import OnThisPage from '@/components/OnThisPage.vue';
 import NextPrevLinks from '@/components/NextPrevLinks.vue';
 
 export default {
 	components: {
+		DocumentationLayout,
 		OnThisPage,
 		NextPrevLinks,
 	},

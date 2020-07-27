@@ -1,0 +1,41 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 900;
+	font-style: normal;
+	font-named-instance: 'Regular';
+	font-display: swap;
+	src: url('https://rsms.me/inter/font-files/Inter.var.woff2?3.13') format('woff2');
+}
+
+@font-face {
+	font-family: 'Inter var';
+	font-weight: 100 900;
+	font-style: italic;
+	font-named-instance: 'Italic';
+	font-display: swap;
+	src: url('https://rsms.me/inter/font-files/Inter-italic.var.woff2?3.13') format('woff2');
+}
+
+:root {
+	font-size: 15px;
+}
+
+@screen lg {
+	font-size: 16px;
+}
+
+:focus {
+	@apply outline-none shadow-focus;
+}
+
+* {
+	@apply transition-colors duration-200;
+
+	&::selection {
+		@apply bg-brand;
+	}
+}

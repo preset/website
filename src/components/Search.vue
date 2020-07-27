@@ -10,7 +10,7 @@
 				type="text"
 				:value="query"
 				:class="[
-					...[showResult ? 'rounded-b-none' : []],
+					...[showResult ? 'sm:rounded-b-none shadow-md' : []],
 					'block w-full',
 					'py-3 pl-12 pr-4',
 					'rounded-lg',
@@ -29,7 +29,7 @@
 		</label>
 		<nav
 			v-if="showResult"
-			style="max-height: calc(100vh - 120px)"
+			style="max-height: calc(100vh - 95px)"
 			:class="[
 				'results',
 				'fixed z-50 inset-x-0 bottom-0',
