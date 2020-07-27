@@ -99,7 +99,7 @@ export default {
 				threshold: 1,
 			});
 
-			const elements = document.querySelectorAll('.content h2, .content h3, .content h4, .content h5, .content h6');
+			const elements = document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6');
 
 			for (let i = 0; i < elements.length; i++) {
 				this.observer.observe(elements[i]);
