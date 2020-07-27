@@ -27,7 +27,7 @@
 							</g-link>
 						</li>
 						<li class="ml-4">
-							<g-link class="flex px-4 py-3 font-bold rounded-md bg-brand text-on-brand" to="/docs/">
+							<g-link class="flex px-4 py-3 font-bold rounded-lg bg-brand text-on-brand" to="/docs/">
 								<span class="hidden md:inline">Documentation</span>
 								<icon icon="book" class="w-6 h-6 md:hidden" />
 							</g-link>
