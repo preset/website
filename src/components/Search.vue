@@ -107,6 +107,7 @@ query Search {
 <script>
 import Fuse from 'fuse.js';
 import Icon from '@iconify/vue';
+import registerHotkey from 'hotkeys-js';
 
 export default {
 	props: ['placeholder'],
@@ -151,6 +152,7 @@ export default {
 			return this.focused && this.query.length > 0;
 		},
 	},
+
 	methods: {
 		increment() {
 			if (this.focusIndex < this.results.length - 1) {
@@ -183,6 +185,13 @@ export default {
 			this.$refs.input.blur();
 			this.query = '';
 		},
+	},
+
+	mounted() {
+		registerHotkey('ctrl+:,ctrl+k,/', (event) => {
+			event.preventDefault();
+			this.$refs.input.focus();
+		});
 	},
 };
 </script>

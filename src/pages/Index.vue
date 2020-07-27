@@ -11,5 +11,12 @@ export default {
 	components: {
 		Layout,
 	},
+
+	metaInfo() {
+		return {
+			title: 'Preset',
+			titleTemplate: '%s',
+		};
+	},
 };
 </script>

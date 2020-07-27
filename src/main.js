@@ -5,7 +5,6 @@ import '~/main.css';
 export default function(Vue, { router, head, isClient }) {
 	// Set the OpenGraph URL for each route
 	router.beforeEach((to, _from, next) => {
-		console.log({ url: process.env });
 		head.meta.push({
 			key: 'og:url',
 			name: 'og:url',
