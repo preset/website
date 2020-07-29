@@ -6,7 +6,7 @@
 				<h1 class="text-6xl font-bold leading-tight tracking-tight text-brand">
 					Preset
 				</h1>
-				<p class="mt-4 text-2xl text-on-background-blockquote">
+				<p class="mt-4 text-2xl transition-colors duration-200 text-on-background-blockquote">
 					A command line tool for applying existing presets to your freshly scaffolded project, so you don't have to do
 					it manually.
 				</p>
@@ -14,13 +14,13 @@
 				<div class="flex">
 					<g-link
 						to="/docs/"
-						class="px-4 py-3 mt-8 mr-4 text-lg font-semibold rounded-lg shadow-md bg-brand text-on-brand"
+						class="px-4 py-3 mt-8 mr-4 text-lg font-semibold transition-colors duration-200 rounded-lg shadow-md bg-brand text-on-brand"
 					>
 						Get started
 					</g-link>
 					<a
 						href="https://github.com/use-preset/awesome-presets"
-						class="px-4 py-3 mt-8 text-lg font-semibold rounded-lg bg-button text-on-button"
+						class="px-4 py-3 mt-8 text-lg font-semibold transition-colors duration-200 rounded-lg bg-button text-on-button"
 					>
 						Browse presets
 					</a>
