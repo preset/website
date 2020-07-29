@@ -60,7 +60,6 @@ export default {
 
 	data: () => ({
 		code: stripIndent(`
-      // Create your preset
       const { Preset } = require('use-preset');
 
       module.exports = Preset.make('My preset')
