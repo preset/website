@@ -5,7 +5,8 @@ import '~/main.css';
 console.log('Come on, give the site some time. I swear I will make it fancier in the future.');
 
 export default function(Vue, { router, head, isClient }) {
-	const { siteName, siteUrl } = require('../gridsome.config');
+	const siteName = process.env.SITE_NAME || 'Preset';
+	const siteUrl = process.env.SITE_URL || 'https://usepreset.dev';
 
 	// Set the OpenGraph URL for each route
 	router.beforeEach((to, _from, next) => {
