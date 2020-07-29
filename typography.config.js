@@ -5,6 +5,7 @@ module.exports = (theme) => {
 				color: theme('colors.on-background.default'),
 				blockquote: {
 					color: theme('colors.on-background-blockquote.default'),
+					borderLeftColor: theme('colors.on-background-muted.default'),
 				},
 				hr: {
 					borderTopColor: theme('colors.on-background-muted.default'),
