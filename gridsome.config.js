@@ -5,12 +5,16 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-	siteName: process.env.SITE_NAME,
+	siteUrl: process.env.SITE_URL,
+	siteName: process.env.SITE_NAME || 'Preset',
+	siteDescription: process.env.SITE_DESCRIPTION || 'Preset and scaffolding tool',
+	longDescription: 'Preset is a command line tool for applying existing presets to your freshly scaffolded project.',
+
 	icon: {
 		favicon: './src/assets/favicon.png',
 		touchicon: './src/assets/favicon.png',
 	},
-	siteUrl: process.env.SITE_URL,
+
 	settings: {
 		links: [
 			{
@@ -47,6 +51,7 @@ module.exports = {
 			},
 		],
 	},
+
 	plugins: [
 		{
 			use: '@gridsome/source-filesystem',

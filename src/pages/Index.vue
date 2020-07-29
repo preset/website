@@ -53,7 +53,7 @@ export default {
 
 	metaInfo() {
 		return {
-			title: 'Preset',
+			title: 'Preset - Preset and scaffolding tool',
 			titleTemplate: '%s',
 		};
 	},

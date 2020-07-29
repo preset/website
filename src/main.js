@@ -23,14 +23,24 @@ export default function(Vue, { router, head, isClient }) {
 			crossorigin: true,
 		},
 		{
+			key: 'og:site_name',
+			name: 'og:site_name',
+			content: process.env.SITE_NAME,
+		},
+		{
+			key: 'og:title',
+			name: 'og:title',
+			content: process.env.SITE_NAME,
+		},
+		{
+			key: 'og:url',
+			name: 'og:url',
+			content: process.env.SITE_URL,
+		},
+		{
 			key: 'og:type',
 			name: 'og:type',
 			content: 'website',
-		},
-		{
-			key: 'twitter:card',
-			name: 'twitter:card',
-			content: 'summary_large_image',
 		},
 		{
 			key: 'og:image',
@@ -38,9 +48,19 @@ export default function(Vue, { router, head, isClient }) {
 			content: process.env.SITE_URL + '/logo.jpg',
 		},
 		{
+			key: 'twitter:card',
+			name: 'twitter:card',
+			content: 'summary',
+		},
+		{
 			key: 'twitter:image',
 			name: 'twitter:image',
 			content: process.env.SITE_URL + '/logo.jpg',
+		},
+		{
+			key: 'twitter:image:alt',
+			name: 'twitter:image:alt',
+			content: process.env.SITE_NAME,
 		},
 	);
 }

@@ -30,6 +30,7 @@
 query {
   metadata {
     siteName
+		longDescription
   }
 }
 </static-query>
@@ -44,6 +45,31 @@ export default {
 		SiteHeader,
 		SiteFooter,
 		Icon,
+	},
+
+	metaInfo() {
+		const title = this.$static.metadata.siteName;
+		const description = this.$static.metadata.longDescription;
+
+		return {
+			meta: [
+				{
+					key: 'description',
+					name: 'description',
+					content: description,
+				},
+				{
+					key: 'og:description',
+					name: 'og:description',
+					content: description,
+				},
+				{
+					key: 'twitter:description',
+					name: 'twitter:description',
+					content: description,
+				},
+			],
+		};
 	},
 };
 </script>
