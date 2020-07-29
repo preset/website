@@ -16,6 +16,7 @@ import close from '@iconify/icons-bx/bx-x';
 import search from '@iconify/icons-bx/bx-search';
 import chevronRight from '@iconify/icons-bx/bx-chevron-right';
 import book from '@iconify/icons-bx/bxs-book-alt';
+import heart from '@iconify/icons-heroicons-solid/heart';
 
 Object.entries({
 	menu,
@@ -30,6 +31,7 @@ Object.entries({
 	chevronRight,
 	search,
 	book,
+	heart,
 }).forEach(([name, icon]) => Icon.addIcon(name, icon));
 
 export default {

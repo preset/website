@@ -55,6 +55,9 @@
 			<icon icon="close" class="w-6 h-6" v-if="sidebarOpen" />
 			<icon icon="menu" class="w-6 h-6" v-else />
 		</button>
+
+		<!-- Footer -->
+		<documentation-footer />
 	</main>
 </template>
 
@@ -68,12 +71,14 @@ query {
 
 <script>
 import DocumentationHeader from '@/components/Header';
+import DocumentationFooter from '@/components/Footer';
 import DocumentationSidebar from '@/components/documentation/Sidebar';
 import Icon from '@/components/Icon';
 
 export default {
 	components: {
 		DocumentationHeader,
+		DocumentationFooter,
 		DocumentationSidebar,
 		Icon,
 	},

@@ -904,6 +904,16 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-bx/-/icons-bx-1.0.3.tgz#490206b3ded7f813be654b551c64548b08d7ebd6"
   integrity sha512-CgqM+XcypQDRCmuTZj3SlbZUGr0uK69vFc7GeBfJUKBZW/yelZ35I6ot1tVpkF/UrQebpRGRDmOFGRp/3z/SnQ==
 
+"@iconify/icons-heroicons-outline@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-heroicons-outline/-/icons-heroicons-outline-1.0.1.tgz#26ec44bf70f8fdf3bce845e12010d9d4b53b0b35"
+  integrity sha512-ytu9rX5ZJrT8jMz4p4NIBKEjxwCycxnNmrMDMAJYEILCWWO+W6LScEY96wPqkrEpvKZORUK5lw3ouKnN4UBqNQ==
+
+"@iconify/icons-heroicons-solid@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-heroicons-solid/-/icons-heroicons-solid-1.0.1.tgz#5713443ca50ffc40575b5ad40c977901813ecd5d"
+  integrity sha512-6AmFDOl3dI14LYRDmjZbk8NR4B0n1YXlipwjfBFW1Qad9luzk++jC14wWOnb0mJw9YlOGisRxSoltVQGtEhQMg==
+
 "@iconify/vue@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@iconify/vue/-/vue-1.0.2.tgz#8e35ee7fc1540d383ea9894384982f8e5b38ab70"

@@ -2,6 +2,8 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 import '~/main.css';
 
+console.log('Come on, give the site some time. I swear I will make it fancier in the future.');
+
 export default function(Vue, { router, head, isClient }) {
 	// Set the OpenGraph URL for each route
 	router.beforeEach((to, _from, next) => {

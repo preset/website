@@ -16,6 +16,8 @@
 		"@gridsome/remark-prismjs": "^0.3.0",
 		"@gridsome/source-filesystem": "^0.6.2",
 		"@gridsome/transformer-remark": "^0.5.0",
+		"@iconify/icons-heroicons-outline": "^1.0.1",
+		"@iconify/icons-heroicons-solid": "^1.0.1",
 		"@iconify/vue": "^1.0.2",
 		"@tailwindcss/typography": "^0.2.0",
 		"fuse.js": "^3.4.6",

@@ -18,9 +18,11 @@
 			]"
 		/>
 
-		<div class="container flex flex-col flex-1 mx-auto mt-32 mb-40 md:px-4 md:flex-row">
+		<div class="container flex flex-col flex-1 mx-auto mt-32 md:px-4 md:flex-row">
 			<slot />
 		</div>
+
+		<site-footer />
 	</main>
 </template>
 
@@ -34,11 +36,13 @@ query {
 
 <script>
 import SiteHeader from '@/components/Header';
+import SiteFooter from '@/components/Footer';
 import Icon from '@/components/Icon';
 
 export default {
 	components: {
 		SiteHeader,
+		SiteFooter,
 		Icon,
 	},
 };
