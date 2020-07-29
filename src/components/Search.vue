@@ -1,5 +1,6 @@
 <template>
 	<div @keydown.down="increment" @keydown.up="decrement" @keydown.enter="go" class="relative">
+		<!-- Input -->
 		<label class="relative block">
 			<span class="sr-only">Search the documentation</span>
 			<div class="absolute inset-y-0 left-0 flex items-center justify-center px-4 py-2 opacity-50">
@@ -27,16 +28,18 @@
 				@change="query = $event.target.value"
 			/>
 		</label>
+
+		<!-- Results -->
 		<nav
 			v-if="showResult"
 			style="max-height: calc(100vh - 95px)"
 			:class="[
 				'results',
-				'fixed z-50 inset-x-0 bottom-0',
+				'fixed z-50 inset-x-0 top-12',
 				'overflox-y-auto',
-				'shadow-md rounded-md rounded-t-none',
+				'shadow-md rounded-md m-4',
 				'bg-navigation text-on-navigation',
-				'sm:bottom-auto sm:absolute',
+				'sm:bottom-auto sm:absolute sm:rounded-t-none sm:m-0 sm:top-auto',
 			]"
 		>
 			<ul class="px-4 py-0 m-0" :class="{ 'py-4': results.length === 0 }">

@@ -15,6 +15,10 @@ module.exports = {
 				sans: ['Inter var', ...fontFamily.sans],
 			},
 			inset: {
+				10: '4.5rem',
+				12: '5rem',
+				14: '5.5rem',
+				16: '6rem',
 				18: '6.5rem',
 			},
 			width: {
