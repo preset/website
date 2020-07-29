@@ -190,7 +190,7 @@ export default {
 	mounted() {
 		registerHotkey('ctrl+:,ctrl+k,/', (event) => {
 			event.preventDefault();
-			this.$refs.input.focus();
+			this.$nextTick(() => this.$refs.input?.focus());
 		});
 	},
 };

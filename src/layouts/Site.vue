@@ -33,7 +33,7 @@ query {
 </static-query>
 
 <script>
-import SiteHeader from '@/components/site/Header';
+import SiteHeader from '@/components/Header';
 import Icon from '@/components/Icon';
 
 export default {

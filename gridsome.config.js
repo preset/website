@@ -12,16 +12,29 @@ module.exports = {
 	},
 	siteUrl: process.env.SITE_URL,
 	settings: {
-		twitter: {
-			name: 'Twitter',
-			title: 'Visit my Twitter',
-			url: process.env.TWITTER_URL || false,
-		},
-		github: {
-			name: 'Github',
-			title: 'Visit the repositories',
-			url: process.env.GITHUB_URL || false,
-		},
+		links: [
+			{
+				id: 'docs',
+				name: 'Documentation',
+				title: 'Read the documentation',
+				url: '/docs/',
+				icon: 'book',
+			},
+			{
+				id: 'twitter',
+				name: 'Twitter',
+				title: 'Visit my Twitter',
+				url: process.env.TWITTER_URL || false,
+				icon: 'twitter',
+			},
+			{
+				id: 'github',
+				name: 'Github',
+				title: 'Visit the repositories',
+				url: process.env.GITHUB_URL || false,
+				icon: 'github',
+			},
+		],
 		sidebar: [
 			{
 				name: 'docs',

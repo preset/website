@@ -67,7 +67,7 @@ query {
 </static-query>
 
 <script>
-import DocumentationHeader from '@/components/documentation/Header';
+import DocumentationHeader from '@/components/Header';
 import DocumentationSidebar from '@/components/documentation/Sidebar';
 import Icon from '@/components/Icon';
 
