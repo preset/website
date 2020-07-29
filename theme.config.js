@@ -81,9 +81,9 @@ const dark = new Theme()
 			muted: new TinyColor('#ffffff').setAlpha(0.1),
 		},
 		'on-sidebar': {
-			default: '#959bb1',
+			default: '#a7acbe',
 			active: '#ffffff',
-			header: '#a0aec0',
+			header: '#575d75',
 			hover: '#ffffff',
 		},
 		'on-brand': '#0c3286',
