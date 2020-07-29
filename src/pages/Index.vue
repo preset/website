@@ -63,7 +63,7 @@ export default {
       const { Preset } = require('use-preset');
 
       module.exports = Preset.make('My preset')
-        // Copy everything in your template folder
+        // Copy the templates
         .copyTemplates()
 
         // Edit the package.json file
