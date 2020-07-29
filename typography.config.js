@@ -7,6 +7,9 @@ module.exports = (theme) => {
 					color: theme('colors.on-background-blockquote.default'),
 					borderLeftColor: theme('colors.on-background-muted.default'),
 				},
+				'blockquote p:first-of-type::before, blockquote p:last-of-type::after': {
+					content: 'none',
+				},
 				hr: {
 					borderTopColor: theme('colors.on-background-muted.default'),
 				},
