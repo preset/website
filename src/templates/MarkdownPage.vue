@@ -65,6 +65,7 @@ export default {
 			title: title,
 			meta: [
 				{
+					key: 'description',
 					name: 'description',
 					content: description,
 				},

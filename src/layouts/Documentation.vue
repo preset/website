@@ -93,6 +93,7 @@ export default {
 		const description = this.$static.metadata.longDescription;
 
 		return {
+			titleTemplate: '%s - Preset',
 			meta: [
 				{
 					key: 'description',

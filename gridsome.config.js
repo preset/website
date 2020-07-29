@@ -6,8 +6,8 @@
 
 module.exports = {
 	siteUrl: process.env.SITE_URL,
-	siteName: process.env.SITE_NAME || 'Preset',
-	siteDescription: process.env.SITE_DESCRIPTION || 'Preset and scaffolding tool',
+	siteName: 'Preset',
+	siteDescription: 'Preset and scaffolding tool',
 	longDescription: 'Preset is a command line tool for applying existing presets to your freshly scaffolded project.',
 
 	icon: {
