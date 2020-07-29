@@ -5,6 +5,8 @@ import '~/main.css';
 console.log('Come on, give the site some time. I swear I will make it fancier in the future.');
 
 export default function(Vue, { router, head, isClient }) {
+	const { siteName, siteUrl } = require('../gridsome.config');
+
 	// Set the OpenGraph URL for each route
 	router.beforeEach((to, _from, next) => {
 		head.meta.push({
@@ -25,17 +27,17 @@ export default function(Vue, { router, head, isClient }) {
 		{
 			key: 'og:site_name',
 			name: 'og:site_name',
-			content: process.env.SITE_NAME,
+			content: siteName,
 		},
 		{
 			key: 'og:title',
 			name: 'og:title',
-			content: process.env.SITE_NAME,
+			content: siteName,
 		},
 		{
 			key: 'og:url',
 			name: 'og:url',
-			content: process.env.SITE_URL,
+			content: siteUrl,
 		},
 		{
 			key: 'og:type',
@@ -45,7 +47,7 @@ export default function(Vue, { router, head, isClient }) {
 		{
 			key: 'og:image',
 			name: 'og:image',
-			content: process.env.SITE_URL + '/logo.jpg',
+			content: siteUrl + '/logo.jpg',
 		},
 		{
 			key: 'twitter:card',
@@ -55,7 +57,7 @@ export default function(Vue, { router, head, isClient }) {
 		{
 			key: 'twitter:image',
 			name: 'twitter:image',
-			content: process.env.SITE_URL + '/logo.jpg',
+			content: siteUrl + '/logo.jpg',
 		},
 		{
 			key: 'twitter:image:alt',
