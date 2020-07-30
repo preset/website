@@ -5,13 +5,30 @@ import '~/main.css';
 console.log('Come on, give the site some time. I swear I will make it fancier in the future.');
 
 export default function(Vue, { router, head, isClient }) {
+	router.beforeEach((to, _from, next) => {
+		if (to?.path === '/docs/') {
+			next({ path: '/docs/basics/introduction/' });
+		}
+
+		next();
+	});
+
 	// Set the OpenGraph URL for each route
 	router.beforeEach((to, _from, next) => {
-		head.meta.push({
-			key: 'og:url',
-			name: 'og:url',
-			content: process.env.SITE_URL + to.path,
-		});
+		const url = process.env.SITE_URL + to.path;
+
+		head.meta.push(
+			{
+				key: 'og:url',
+				name: 'og:url',
+				content: url,
+			},
+			{
+				key: 'canonical',
+				rel: 'canonical',
+				href: url,
+			},
+		);
 		next();
 	});
 

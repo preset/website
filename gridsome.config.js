@@ -44,8 +44,18 @@ module.exports = {
 				name: 'docs',
 				sections: [
 					{
-						title: 'Getting Started',
-						items: ['/docs/'],
+						id: 'basics',
+						title: 'Basics',
+						items: ['/docs/basics/introduction/', '/docs/basics/getting-started/'],
+					},
+					{
+						id: 'authoring',
+						title: 'Authoring',
+						items: [],
+					},
+					{
+						id: 'other',
+						items: ['/docs/alternatives/'],
 					},
 				],
 			},

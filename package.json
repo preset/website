@@ -9,7 +9,8 @@
 	"dependencies": {
 		"@iconify/icons-bx": "^1.0.3",
 		"gridsome": "^0.7.0",
-		"hotkeys-js": "^3.8.1"
+		"hotkeys-js": "^3.8.1",
+		"medium-zoom": "^1.0.6"
 	},
 	"devDependencies": {
 		"@gridsome/plugin-sitemap": "^0.2.3",

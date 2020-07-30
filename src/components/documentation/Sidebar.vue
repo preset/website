@@ -9,8 +9,8 @@
 			</g-link>
 		</div>
 
-		<div v-for="section in sidebar.sections" :key="section.title" class="pb-4 mb-4">
-			<h1 class="mb-4 text-sm font-bold tracking-tight uppercase lg:mb-2 text-on-sidebar-header">
+		<div v-for="section in sidebar.sections" :key="section.id" class="pb-4 mb-4">
+			<h1 class="mb-4 text-sm font-bold tracking-tight uppercase lg:mb-2 text-on-sidebar-header" v-if="section.title">
 				{{ section.title }}
 			</h1>
 
