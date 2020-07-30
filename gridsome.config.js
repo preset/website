@@ -49,6 +49,11 @@ module.exports = {
 						items: ['/docs/basics/introduction/', '/docs/basics/getting-started/'],
 					},
 					{
+						id: 'concepts',
+						title: 'Concepts',
+						items: ['/docs/concepts/preset/', '/docs/concepts/action/'],
+					},
+					{
 						id: 'authoring',
 						title: 'Authoring',
 						items: [],
