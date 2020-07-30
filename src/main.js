@@ -6,8 +6,14 @@ console.log('Come on, give the site some time. I swear I will make it fancier in
 
 export default function(Vue, { router, head, isClient }) {
 	router.beforeEach((to, _from, next) => {
-		if (to?.path === '/docs/') {
-			next({ path: '/docs/basics/introduction/' });
+		const redirections = {
+			'/docs/': '/docs/basics/introduction/',
+			'/docs/basics/': '/docs/basics/introduction/',
+			'/docs/concepts/': '/docs/concepts/action/',
+		};
+
+		if (Reflect.has(redirections, to?.path)) {
+			next({ path: redirections[(to?.path)] });
 		}
 
 		next();
