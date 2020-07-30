@@ -49,12 +49,35 @@ query ($id: ID!) {
 import DocumentationLayout from '@/layouts/Documentation';
 import BottomPageLinks from '@/components/documentation/BottomPageLinks';
 import OnThisPage from '@/components/documentation/OnThisPage';
+import zoom from 'medium-zoom';
 
 export default {
 	components: {
 		DocumentationLayout,
 		BottomPageLinks,
 		OnThisPage,
+	},
+
+	mounted() {
+		this.$nextTick(this.initializeZoom());
+	},
+
+	watch: {
+		$route: function() {
+			this.$nextTick(this.initializeZoom);
+		},
+	},
+
+	methods: {
+		initializeZoom() {
+			zoom('.prose img', {
+				background: 'rgba(0, 0, 0, .5)',
+				container: {
+					top: 100,
+					bottom: 100,
+				},
+			});
+		},
 	},
 
 	metaInfo() {
