@@ -46,17 +46,28 @@ module.exports = {
 					{
 						id: 'basics',
 						title: 'Basics',
-						items: ['/docs/basics/introduction/', '/docs/basics/getting-started/'],
+						items: ['/docs/basics/introduction/', '/docs/basics/getting-started/', '/docs/basics/writing-a-preset/'],
 					},
 					{
 						id: 'concepts',
 						title: 'Concepts',
-						items: ['/docs/concepts/preset/', '/docs/concepts/action/'],
+						items: [
+							'/docs/concepts/preset/',
+							'/docs/concepts/action/',
+							'/docs/concepts/context/',
+							'/docs/concepts/templates/',
+							'/docs/concepts/hooks/',
+						],
 					},
 					{
-						id: 'authoring',
-						title: 'Authoring',
-						items: [],
+						id: 'guide',
+						title: 'Guide',
+						items: ['/docs/actions/'],
+					},
+					{
+						id: 'api',
+						title: 'API reference',
+						items: ['/docs/api/context/', '/docs/api/preset/'],
 					},
 					{
 						id: 'other',

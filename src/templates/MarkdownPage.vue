@@ -1,6 +1,6 @@
 <template>
 	<documentation-layout>
-		<section class="flex flex-col flex-wrap items-start justify-start px-8 lg:pl-0 md:flex-row">
+		<section class="flex flex-col flex-wrap items-start justify-start w-full px-8 lg:pl-0 md:flex-row">
 			<div class="order-1 w-full md:pr-16 md:w-3/4">
 				<div class="lg:pl-8 xl:pl-16">
 					<article class="prose prose-dark lg:prose-lg " v-html="$page.markdownPage.content" />
