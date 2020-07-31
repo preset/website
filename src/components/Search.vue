@@ -96,6 +96,7 @@ query Search {
         id
         path
         title
+				search
         headings {
         	depth
           value
@@ -127,7 +128,7 @@ export default {
 	computed: {
 		results() {
 			const fuse = new Fuse(this.headings, {
-				keys: ['value'],
+				keys: ['value', 'search', 'title'],
 				threshold: 0.25,
 			});
 
@@ -142,6 +143,7 @@ export default {
 				page.headings.forEach((heading) => {
 					result.push({
 						...heading,
+						search: page.search,
 						path: page.path,
 						title: page.title,
 					});

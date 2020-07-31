@@ -1,5 +1,7 @@
 ---
 title: 'Introduction'
+description: ''
+search: ''
 sidebar: 'docs'
 next: '/docs/basics/getting-started/'
 ---

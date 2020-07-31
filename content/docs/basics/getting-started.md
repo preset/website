@@ -1,6 +1,7 @@
 ---
 title: 'Getting started'
 description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/basics/introduction/'
 next: '/docs/concepts/preset/'

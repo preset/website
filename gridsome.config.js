@@ -50,7 +50,7 @@ module.exports = {
 							//
 							'/docs/basics/introduction/',
 							'/docs/basics/getting-started/',
-							'/docs/alternatives/',
+							'/docs/basics/alternatives/',
 						],
 					},
 					{

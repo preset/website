@@ -1,5 +1,7 @@
 ---
 title: 'Context'
+description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/concept/hooks/'
 next: '/docs/api/preset/'

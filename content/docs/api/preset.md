@@ -1,8 +1,9 @@
 ---
 title: 'Preset (object)'
+description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/api/context/'
-next: ''
 ---
 
 ## Preset

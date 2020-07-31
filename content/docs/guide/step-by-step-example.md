@@ -1,6 +1,7 @@
 ---
 title: 'Step-by-step example'
 description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/guide/writing-tests/'
 next: '/docs/actions/copy/'

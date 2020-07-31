@@ -1,5 +1,7 @@
 ---
 title: 'Hooks'
+description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/concepts/templates/'
 next: '/docs/guide/writing-a-preset/'

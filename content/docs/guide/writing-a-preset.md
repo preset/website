@@ -1,6 +1,7 @@
 ---
 title: 'Writing a preset'
 description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/concepts/hooks/'
 next: '/docs/guide/handling-arguments/'

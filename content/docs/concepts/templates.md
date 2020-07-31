@@ -1,5 +1,7 @@
 ---
 title: 'Templates'
+description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/concepts/context/'
 next: '/docs/concepts/hooks/'

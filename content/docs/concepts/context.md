@@ -1,5 +1,7 @@
 ---
 title: 'Context'
+description: ''
+search: ''
 sidebar: 'docs'
 prev: '/docs/concepts/action/'
 next: '/docs/concepts/templates/'
