@@ -1,7 +1,7 @@
 ---
 title: 'Hosting'
 sidebar: 'docs'
-prev: '/docs/getting-started/'
+prev: '/docs/basics/getting-started/'
 next: ''
 ---
 

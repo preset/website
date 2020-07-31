@@ -1,7 +1,6 @@
 ---
 title: 'Introduction'
 sidebar: 'docs'
-prev: ''
 next: '/docs/basics/getting-started/'
 ---
 
