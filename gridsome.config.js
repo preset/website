@@ -59,11 +59,11 @@ module.exports = {
 							'/docs/concepts/hooks/',
 						],
 					},
-					{
-						id: 'guide',
-						title: 'Guide',
-						items: ['/docs/actions/'],
-					},
+					// {
+					// 	id: 'guide',
+					// 	title: 'Guide',
+					// 	items: ['/docs/actions/'],
+					// },
 					{
 						id: 'api',
 						title: 'API reference',
