@@ -32,6 +32,4 @@ A preset can be applied by providing its URL, GitHub handle or path as the first
 npx use-preset your-github-username/your-preset
 ```
 
-## Authoring
-
-The interesting part with Preset is that it exposes an API that makes it easy to create presets. To build your own, see the [authoring guide](/docs/authoring).
+> TODO

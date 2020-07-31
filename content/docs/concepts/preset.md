@@ -21,4 +21,6 @@ If a `package.json` exists, it can have an optional `preset` key, which value mu
 }
 ```
 
-The preset file must export an object, which syntax is documented in the [authoring guide](/docs/authoring/).
+The preset file must export an object.
+
+> TODO
