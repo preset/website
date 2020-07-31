@@ -2,7 +2,7 @@
 title: 'Alternatives'
 sidebar: 'docs'
 prev: ''
-next: '/docs/getting-started/'
+next: '/docs/basics/getting-started/'
 ---
 
 Preset isn't the first tool in its category. Alternatives are available, each having their props and cons.
