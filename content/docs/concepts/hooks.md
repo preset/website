@@ -2,7 +2,7 @@
 title: 'Hooks'
 sidebar: 'docs'
 prev: '/docs/concepts/templates/'
-next: '/docs/api/context/'
+next: '/docs/guide/writing-a-preset/'
 ---
 
 ## Definition

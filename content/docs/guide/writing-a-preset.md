@@ -2,8 +2,8 @@
 title: 'Writing a preset'
 description: ''
 sidebar: 'docs'
-prev: '/docs/basics/getting-started/'
-next: '/docs/concepts/preset/'
+prev: '/docs/concepts/hooks/'
+next: '/docs/guide/handling-arguments/'
 ---
 
 ## Creating the project

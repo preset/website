@@ -1,8 +1,8 @@
 ---
 title: 'Hosting'
 sidebar: 'docs'
-prev: '/docs/basics/getting-started/'
-next: ''
+prev: '/docs/guide/handling-arguments/'
+next: '/docs/guide/writing-tests/'
 ---
 
 ## Hosting

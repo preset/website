@@ -1,3 +1,11 @@
+---
+title: 'Step-by-step example'
+description: ''
+sidebar: 'docs'
+prev: '/docs/guide/writing-tests/'
+next: '/docs/actions/copy/'
+---
+
 ## Workflow
 
 Since a preset is meant to perform modifications on an existing project, you will need to know what kind of modifications you want to make.

@@ -46,7 +46,12 @@ module.exports = {
 					{
 						id: 'basics',
 						title: 'Basics',
-						items: ['/docs/basics/introduction/', '/docs/basics/getting-started/', '/docs/basics/writing-a-preset/'],
+						items: [
+							//
+							'/docs/basics/introduction/',
+							'/docs/basics/getting-started/',
+							'/docs/alternatives/',
+						],
 					},
 					{
 						id: 'concepts',
@@ -59,19 +64,39 @@ module.exports = {
 							'/docs/concepts/hooks/',
 						],
 					},
-					// {
-					// 	id: 'guide',
-					// 	title: 'Guide',
-					// 	items: ['/docs/actions/'],
-					// },
+					{
+						id: 'guide',
+						title: 'Guide',
+						items: [
+							'/docs/guide/writing-a-preset/',
+							'/docs/guide/handling-arguments/',
+							'/docs/guide/hosting/',
+							'/docs/guide/writing-tests/',
+							'/docs/guide/step-by-step-example/',
+						],
+					},
+					{
+						id: 'actions',
+						title: 'Actions',
+						items: [
+							'/docs/actions/copy/',
+							'/docs/actions/custom/',
+							'/docs/actions/delete/',
+							'/docs/actions/edit/',
+							'/docs/actions/edit-json/',
+							'/docs/actions/preset/',
+							'/docs/actions/prompt/',
+							'/docs/actions/run/',
+						],
+					},
 					{
 						id: 'api',
 						title: 'API reference',
-						items: ['/docs/api/context/', '/docs/api/preset/'],
-					},
-					{
-						id: 'other',
-						items: ['/docs/alternatives/'],
+						items: [
+							//
+							'/docs/api/context/',
+							'/docs/api/preset/',
+						],
 					},
 				],
 			},
