@@ -111,7 +111,7 @@ query Search {
 <script>
 import Fuse from 'fuse.js';
 import Icon from '@iconify/vue';
-import registerHotkey from 'hotkeys-js';
+import registerHotkey from 'tinykeys';
 
 export default {
 	props: ['placeholder'],
@@ -193,9 +193,15 @@ export default {
 	},
 
 	mounted() {
-		registerHotkey('ctrl+:,ctrl+k,/', (event) => {
+		const focusSearch = (event) => {
 			event.preventDefault();
 			this.$nextTick(() => this.$refs.input?.focus());
+		};
+
+		registerHotkey(window, {
+			'$mod+:': focusSearch,
+			'$mod+K': focusSearch,
+			'/': focusSearch,
 		});
 	},
 };
