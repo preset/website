@@ -20,6 +20,7 @@
 
 		<div class="container flex flex-col flex-1 mx-auto mt-32 mb-40 md:px-4 md:flex-row">
 			<documentation-sidebar
+				@navigate="sidebarOpen = false"
 				:class="[
 					'w-full p-12',
 					'fixed inset-0 z-40 overflow-y-scroll',
