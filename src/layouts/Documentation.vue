@@ -22,12 +22,13 @@
 			<documentation-sidebar
 				:class="[
 					'w-full p-12',
-					'fixed inset-0 z-40',
+					'fixed inset-0 z-40 overflow-y-scroll',
 					'transition-transform duration-300 ease-in-out',
 					'transform',
 					'text-on-background bg-background',
-					'border-t-2 border-brand',
-					'md:p-8 sm:w-sidebar shadow-md',
+					'border-t-2 border-brand shadow-md',
+					'sm:w-sidebar sm:overflow-auto',
+					'md:p-8',
 					'lg:border-none',
 					'lg:bg-transparent',
 					'lg:p-0 lg:mx-0 lg:pl-8 ',
