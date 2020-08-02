@@ -11,7 +11,7 @@ next: '/docs/guide/writing-tests/'
 
 Presets can be hosted on your local machine, on any Git provider, as well as on a Github Gist. You can also have a mono-repository containing multiple presets, if it helps you with their maintenance.
 
-### Locally
+## Locally
 
 By providing the path to the directory that contain a preset, you can apply it in your current directory. You should use this method when developing your own presets, or when contributing to existing ones.
 
@@ -19,7 +19,7 @@ By providing the path to the directory that contain a preset, you can apply it i
 npx use-preset ~/code/presets/your-cool-preset
 ```
 
-### On GitHub
+## On GitHub
 
 GitHub receives a special treatment, as you can use the `username/repository` shorthand. You can also pass the full URL to the repository.
 
@@ -30,7 +30,7 @@ npx use-preset https://github.com/your-username/your-cool-preset
 npx use-preset your-username/your-cool-preset
 ```
 
-#### Official presets
+### Official presets
 
 Presets under the `use-preset` GitHub organization can be applied with just their name. For instance, you can scaffold a new preset by calling the official `preset` preset.
 
@@ -38,7 +38,7 @@ Presets under the `use-preset` GitHub organization can be applied with just thei
 npx use-preset preset
 ```
 
-### Mono-repositories
+## Mono-repositories
 
 Additionally, if you have a mono-repository, you can install a preset under any subdirectory by adding a colon and the path to the URL.
 
@@ -62,11 +62,11 @@ npx use-preset your-username/repository:preset1
 npx use-preset your-username/repository:category/preset2
 ```
 
-### On Github's Gists
+## On Github's Gists
 
 You can install a preset hosted on a Github Gist by using its URL. Not exactly sure why you would want to do that, but you can.
 
-### On any Git provider
+## On any Git provider
 
 As long as the repository is publicly accessible, you can use it by prepending `git::` to its URL.
 
