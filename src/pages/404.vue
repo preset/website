@@ -1,22 +1,21 @@
 <template>
 	<Layout>
-		<div class="pt-8 md:pt-16">
-			<h1 class="text-center font-bold text-4xl text-brand">
-				Oh no! There is nothing here.
-			</h1>
-		</div>
-		<div class="mb-10 flex items-center justify-center">
-			<g-link to="/" class="font-bold border-b border-brand text-xl"
-				>Go back</g-link
-			>.
+		<div class="flex flex-col items-center justify-center w-full">
+			<h1 class="text-6xl font-hairline">404</h1>
+			<p class="text-xl text-on-background-blockquote">
+				It seems that you have lost yourself.
+			</p>
 		</div>
 	</Layout>
 </template>
 
 <script>
+import Layout from '@/layouts/Site';
+
 export default {
+	components: { Layout },
 	metaInfo: {
-		title: '404 - Nothing here',
+		title: '404',
 	},
 };
 </script>
