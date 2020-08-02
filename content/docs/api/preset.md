@@ -31,11 +31,11 @@ The path to the directory that contain the templates, relative to the root of th
 
 A method that takes the context as a parameter and return a list of actions.
 
-### `parse`
+### `options`
 
 - **Type**: `object`
 
-A method that indicates how to parse extra command line arguments.
+A list of command line options. See [`C.C. sama`](https://github.com/cacjs/cac) for information on the syntax.
 
 ### `before`
 

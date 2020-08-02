@@ -77,15 +77,15 @@ The absolute path to the current target directory. It is either the current work
 
 - **Type**: `string[]`
 
-An array containing additionnal command line arguments. The ones used by `use-preset` are not specified. For instance, when using `npx use-preset hello-world --in helloworld`, the `argv` property will be empty.
+An array containing the raw command line arguments.
 
 ---
 
 ### `args`
 
-- **Type**: `object`
+- **Type**: `string[]`
 
-An object containing parsed additional command line arguments.
+An object containing parsed additional command line arguments, without the flags.
 
 ---
 
@@ -93,7 +93,7 @@ An object containing parsed additional command line arguments.
 
 - **Type**: `object`
 
-An object containing parsed additional command line flags.
+An object containing parsed command line flags. See [`C.C. sama`](https://github.com/cacjs/cac) for information on the syntax.
 
 ---
 
