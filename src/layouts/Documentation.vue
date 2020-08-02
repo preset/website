@@ -28,7 +28,7 @@
 					'transform',
 					'text-on-background bg-background',
 					'border-t-2 border-brand shadow-md',
-					'sm:w-sidebar sm:overflow-auto',
+					'sm:w-sidebar sm:overflow-visible',
 					'md:p-8',
 					'lg:border-none',
 					'lg:bg-transparent',
