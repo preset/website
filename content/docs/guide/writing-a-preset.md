@@ -29,6 +29,7 @@ The `Preset` object imported from the `use-preset` dependency is a fluent builde
 const { Preset } = require('use-preset');
 
 module.exports = Preset.make('Your preset name')
+  .copyTemplates()
   // Auto-completion will give you a bunch of methods
 ;
 ```
@@ -44,6 +45,7 @@ module.exports = Preset.make({
   name: 'Your preset name',
   actions: (context) => [{
     type: 'copy',
+    strategy: 'ask',
     // Auto-completion works here too
   }],
 });
