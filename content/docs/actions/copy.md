@@ -11,9 +11,13 @@ next: '/docs/actions/custom/'
 
 A `copy` action can copy files and directories from the template directory to the target directory. It is the most common action in a preset, since most of the time a preset only needs to copy over some new or modified files.
 
+---
+
 ## Fluent API
 
 The fluent API translates to the object syntax under the hood, so you can look at the object API reference to understand what every method and property do.
+
+---
 
 ### Pending objects
 

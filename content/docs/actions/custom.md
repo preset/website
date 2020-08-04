@@ -11,7 +11,13 @@ next: '/docs/actions/delete/'
 
 A `custom` actions allows for custom code to be executed.
 
+---
+
 ## Fluent API
+
+The fluent API translates to the object syntax under the hood, so you can look at the object API reference to understand what every method and property do.
+
+---
 
 ### `execute`
 
@@ -26,6 +32,8 @@ module.exports = Preset.make('My preset')
 ```
 
 This method directly returns the `Preset` object, so calling `chain` is not needed.
+
+---
 
 ## Object API
 

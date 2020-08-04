@@ -11,9 +11,13 @@ next: '/docs/actions/preset/'
 
 An `edit-json` action can edit a JSON file by merging or removing content. It is useful for adding or removing dependencies from `package.json` or `composer.json` files, but it can be used with an JSON file.
 
+---
+
 ## Fluent API
 
 The fluent API translates to the object syntax under the hood, so you can look at the object API reference to understand what every method and property do.
+
+---
 
 ### `editJson`
 

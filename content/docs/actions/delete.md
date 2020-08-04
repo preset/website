@@ -11,9 +11,13 @@ next: '/docs/actions/edit/'
 
 A `delete` action can delete files and directories from the target directory.
 
+---
+
 ## Fluent API
 
 The fluent API translates to the object syntax under the hood, so you can look at the object API reference to understand what every method and property do.
+
+---
 
 ### `delete`
 

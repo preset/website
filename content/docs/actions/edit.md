@@ -13,6 +13,8 @@ An `edit` actions helps working with files' content.
 
 With it, you can look for a line with a regular expression, and add another line before or after it. You can also replace a line, or delete lines before or after a match too.
 
+---
+
 ## Fluent API
 
 > Any documentation help is welcome. In the meantime, here's an example.
@@ -87,6 +89,8 @@ A `string`, a regular expression, or a function that returns a `string` or a reg
 
 A `string` or a [replacement function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
 
+---
+
 ### `addLines`
 
 - **Type**: `object`
@@ -104,6 +108,8 @@ A `string` or an array of `string` that contains the lines to add before the fir
 #### `after`
 
 A `string` or an array of `string` that contains the lines to add after the first line that matches with the `search` property.
+
+---
 
 ### `removeLines`
 
