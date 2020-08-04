@@ -9,12 +9,12 @@ next: '/docs/guide/handling-arguments/'
 
 ## Creating the project
 
-In its simplest form, a preset can be just one `preset.js` file. But as soon as you want the comfort of typings, you will need to add `use-preset` as a development dependency.
+In its simplest form, a preset can be just one `preset.js` file. But as soon as you want the safety of typings or the comfort of the fluent API, you will need to add `use-preset` as a development dependency.
 
 The `preset` preset (_yes_) can do that for you. Run the following command to scaffold a preset project:
 
 ```npx
-npx use-preset preset
+npx use-preset preset --in my-preset
 ```
 
 If you used that command, the `preset.js` file will be in the `src` directory. You can change that by editing the `preset` key in the `package.json` file.
