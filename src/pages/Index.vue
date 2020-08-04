@@ -53,7 +53,7 @@ export default {
 
 	metaInfo() {
 		return {
-			title: 'Preset - Preset and scaffolding tool',
+			title: `Preset - ${this.$static.metadata.siteDescription}`,
 			titleTemplate: '%s',
 		};
 	},
@@ -81,3 +81,11 @@ export default {
 	}),
 };
 </script>
+
+<static-query>
+query {
+	metadata {
+		siteDescription
+	}
+}
+</static-query>
