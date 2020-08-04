@@ -11,6 +11,8 @@ next: '/docs/guide/writing-a-preset/'
 
 Hooks are methods called at certain points of the execution of a preset. They can run arbitrary code, and are given the current context object.
 
+Most of the time, you won't need them at all, but they are here if you need them, just in case.
+
 ## Preset hooks
 
 ### `before` and `beforeEach`
