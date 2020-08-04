@@ -9,4 +9,8 @@ next: '/docs/concepts/templates/'
 
 ## Definition
 
-The context object can be accessed by using a closure in multiple methods or objects. It contains information about the current preset, the target directory, the user, their Git configuration, and more.
+The context object can be accessed by using a closure in multiple methods or objects of the preset definition.
+
+It contains information about the current preset, the target directory, the user, their Git configuration, and more.
+
+- See the [context reference](/api/context/).
