@@ -24,3 +24,4 @@ They are the key concept of Preset. They are easy to use and powerful enough to 
 | [Delete](/docs/actions/delete/)       | Deletes files in the target directory                       |
 | [Custom](/docs/actions/custom/)       | Runs arbistrary code                                        |
 | [Prompt](/docs/actions/prompt/)       | Asks the user for information                               |
+| [Run](/docs/actions/run/)             | Runs a system command                                       |
