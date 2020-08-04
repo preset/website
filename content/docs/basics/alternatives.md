@@ -9,7 +9,7 @@ next: '/docs/concepts/preset/'
 
 ## Alternatives
 
-Preset isn't the first tool in its category. Alternatives are available, each having their props and cons.
+Preset isn't the first tool in its category. Alternatives are available, each having their props and cons. But Preset is the first tool to actually focus on modifying existing projects. The projects listed below are scaffolding tools that you may want to know about.
 
 ### SAO
 
@@ -25,4 +25,6 @@ The main con with Yeoman is that it is quite complex to dive into. Additionally,
 
 ### Plop
 
-[Plop](https://github.com/plopjs/plop) is a generator that needs to be installed as a project dependency—though it can be installed globally. Plops looks for a `plopfile` in the project it is installed, which defines all of the generators it has access to. Everything is local to a project... which means Preset could actually be used to scaffold a `plopfile`. And Plop could be used to generate the files needed to implement a new action within Preset.
+[Plop](https://github.com/plopjs/plop) is a generator that needs to be installed as a project dependency—though it can be installed globally. Plops looks for a `plopfile` in the project it is installed, which defines all of the generators it has access to.
+
+Everything is local to a project... which means Preset could actually be used to scaffold a `plopfile`. And Plop could be used to generate the files needed to implement a new action within Preset.
