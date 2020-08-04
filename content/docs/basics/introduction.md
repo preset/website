@@ -26,6 +26,6 @@ As a maintainer, it can be hard as well to keep track of the changes that have b
 
 ### Solution
 
-A preset, on the other hand, describes the exact changes needed for the features to be added.
+A preset, on the other hand, describes the exact changes needed for the features to be added. By reading the preset's code, you know the exact changes it brings.
 
 This solves the previous issue, and makes the maintenance easier, because the overhead caused by all of the files of a boilerplate is gone.
