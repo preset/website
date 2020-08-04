@@ -7,8 +7,7 @@
 					Preset
 				</h1>
 				<p class="mt-4 text-2xl transition-colors duration-200 text-on-background-blockquote">
-					A command line tool for kickstarting your application's development by applying presets to your freshly
-					scaffolded projects.
+					A command line tool for kickstarting your application's development by applying presets on top of it.
 				</p>
 
 				<div class="flex">
@@ -28,8 +27,9 @@
 			</div>
 
 			<!-- Right -->
-			<div class="w-full lg:w-1/2">
+			<div class="w-full space-y-8 lg:w-1/2">
 				<pre class="rounded-lg shadow-xl prism language-js"><code class="language-js">{{ code }}</code></pre>
+				<pre class="rounded-lg shadow-xl prism language-bash"><code class="language-bash">{{ command }}</code></pre>
 			</div>
 		</section>
 	</layout>
@@ -59,6 +59,7 @@ export default {
 	},
 
 	data: () => ({
+		command: stripIndent(`npx use-preset my-preset`),
 		code: stripIndent(`
       const { Preset } = require('use-preset');
 
@@ -84,8 +85,8 @@ export default {
 
 <static-query>
 query {
-	metadata {
-		siteDescription
-	}
+  metadata {
+    siteDescription
+  }
 }
 </static-query>
