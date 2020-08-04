@@ -1,5 +1,5 @@
 ---
-title: 'Preset (object)'
+title: 'Preset'
 description: ''
 search: ''
 sidebar: 'docs'
