@@ -12,7 +12,7 @@ This is the reference for the `generator` object that you pass to `Preset.make()
 
 ## Fluent API
 
-For methods not described here, please refer to the corresponding documentation in the **Action** section.
+For methods not described here, please refer to the corresponding documentation in the **Actions** section.
 
 ---
 
