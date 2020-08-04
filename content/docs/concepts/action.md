@@ -18,7 +18,7 @@ They are the key concept of Preset. They are easy to use and powerful enough to 
 | Name                                  | Description                                                 |
 | ------------------------------------- | ----------------------------------------------------------- |
 | [Copy](/docs/actions/copy/)           | Helps copying files from the preset to the target directory |
-| [Preset](/docs/actions/preset1/)      | Applies other presets                                       |
+| [Preset](/docs/actions/preset/)       | Applies other presets                                       |
 | [Edit JSON](/docs/actions/edit-json/) | Edits JSON files in the target directory                    |
 | [Edit](/docs/actions/edit/)           | Edits files in the target directory                         |
 | [Delete](/docs/actions/delete/)       | Deletes files in the target directory                       |
