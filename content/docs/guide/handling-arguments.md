@@ -46,7 +46,7 @@ For instance, the following:
 npx use-preset ~/code/my-preset hello world
 ```
 
-Will given the following `args` property:
+Will give the following `args` property:
 
 ```js
 ['~/code/my-preset', 'hello', 'world'];
