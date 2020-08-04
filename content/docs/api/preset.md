@@ -14,6 +14,8 @@ This is the reference for the `generator` object that you pass to `Preset.make()
 
 For methods not described here, please refer to the corresponding documentation in the **Action** section.
 
+---
+
 ### `make`
 
 Create the preset. If a string is given, it will be the name of the preset. If an object is given, refer to the [Object API](#objectapi).
