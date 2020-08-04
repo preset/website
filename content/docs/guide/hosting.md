@@ -4,7 +4,7 @@ description: ''
 search: ''
 sidebar: 'docs'
 prev: '/docs/guide/handling-arguments/'
-next: '/docs/guide/writing-tests/'
+next: '/docs/guide/step-by-step-example/'
 ---
 
 ## Hosting

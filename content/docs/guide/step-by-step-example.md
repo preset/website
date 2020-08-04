@@ -3,7 +3,7 @@ title: 'Step-by-step example'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/guide/writing-tests/'
+prev: '/docs/guide/hosting/'
 next: '/docs/actions/copy/'
 ---
 

@@ -71,7 +71,6 @@ module.exports = {
 							'/docs/guide/writing-a-preset/',
 							'/docs/guide/handling-arguments/',
 							'/docs/guide/hosting/',
-							'/docs/guide/writing-tests/',
 							'/docs/guide/step-by-step-example/',
 						],
 					},
