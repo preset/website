@@ -7,8 +7,8 @@
 					Preset
 				</h1>
 				<p class="mt-4 text-2xl transition-colors duration-200 text-on-background-blockquote">
-					A command line tool for applying existing presets to your freshly scaffolded project, so you don't have to do
-					it manually.
+					A command line tool for kickstarting your application's development by applying presets to your freshly
+					scaffolded projects.
 				</p>
 
 				<div class="flex">
