@@ -33,4 +33,8 @@ A preset can be applied by providing its URL, GitHub handle or path as the first
 npx use-preset your-github-username/your-preset
 ```
 
-> TODO
+You can change the directory of installation by using the `--in` flag. This may be useful for presets that are actually scaffolding projects.
+
+```bash
+npx use-preset tailwindcss --in my-app
+```
