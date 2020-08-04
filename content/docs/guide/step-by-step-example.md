@@ -18,12 +18,12 @@ For that, you will need to make an installation of the project you want the pres
 Create a directory with the name of your choice, and initialize the preset in it:
 
 ```bash
-npx use-preset preset
+npx use-preset preset --in my-preset
 ```
 
 ### Initialize the project
 
-My goal is to make a preset that adds Tailwind CSS to a Vite application. I'll go ahead and use `npm init vite-app` to initialize the project.
+The goal here is to make a preset that adds Tailwind CSS to a Vite application. Go ahead and use `npm init vite-app` to initialize the project.
 
 ```bash
 npm init vite-app
@@ -41,43 +41,71 @@ git commit -m "chore: initialize project"
 
 ### Make the modifications
 
-In this case, my first step is to add `tailwindcss` as a dependency. I'll run the command on my test project, but it's a simple action so I can just add it to the preset as well.
+In this case, our first step is to add `tailwindcss` as a dependency. We will need to run the command on our test project, but it's a simple action so I can just add it to the preset as well:
 
-3. **Step by step, I make the modifications by hand in the sample project**. I want to add Tailwind CSS in this case, so I'll add it as a dependency. This is something that won't need more modifications, so I can add it to the preset:
+<!-- prettier-ignore -->
+```js
+const { Preset } = require('use-preset');
 
-   <!-- prettier-ignore -->
-   ```js
-   const { Preset } = require('use-preset');
-   
-   module.exports = Preset.make('Tailwind CSS')
-     .editJson('package.json')
-     .merge({
-       devDependencies: {
-         tailwindcss: '^1',
-         '@tailwindcss/ui': '^0',
-         autoprefixer: '9.8',
-       },
-     })
-     .chain();
-   ```
+module.exports = Preset.make('Tailwind CSS')
+  .editJson('package.json')
+  .merge({
+    devDependencies: {
+      tailwindcss: '^1',
+      '@tailwindcss/ui': '^0',
+      autoprefixer: '9.8',
+    },
+  })
+  .chain();
+```
 
-   I went ahead and added `@tailwindcss/ui` and `autoprefixer` as well.
+Let's go ahead and add `@tailwindcss/ui` and `autoprefixer` as well.
 
-4. **Continue until you arrive at the state you want to be when you'll use the preset**. For that, I just repeat #3.
+**We'll continue these steps until we arrive at the state we want to be when we'll use the preset**.
 
-   For instance, to create the Tailwind CSS preset, I needed to create a `postcss.config.js`. Since the file did not exist prior to that, I added it as a template file in the `/templates` directory, and I added a `copy` action to the preset. I also had to edit the `index.html`, as well as a few other files.
+For instance, in this case, we need to create a `postcss.config.js`. Since the file does not exist on the test porject, we can add it as a template file in the `/templates` directory. Then, a `copy` action will allow us to copy it over when the preset is applied.
 
-   Since the preset is supposed to run on a fresh install, I can safely replace these files, so I added them as templates too. In the end, the preset consits of a `copyTemplates` and an `editJson` method.
+<!-- prettier-ignore -->
+```js
+const { Preset } = require('use-preset');
 
-5. **I test the preset**. I use Git to reset the repository to the fresh installation state, and I apply my local preset to it.
+module.exports = Preset.make('Tailwind CSS')
+  .copyTemplates() // <-- this method copies the templates
+  .editJson('package.json')
+  .merge({
+    devDependencies: {
+      tailwindcss: '^1',
+      '@tailwindcss/ui': '^0',
+      autoprefixer: '9.8',
+    },
+  })
+  .chain();
+```
 
-   ```bash
-   npx use-preset ~/code/presets/vite-tailwindcss
-   ```
+We also want the base `index.html` to use Tailwind CSS, so let's override it by adding our modified version to the `/templates` directory.
 
-6. **I publish it**. The work is done, so I can push it to GitHub. I can now apply the preset with my GitHub handle.
+### Test it
 
-   ```bash
-   # It doesn't actually exist, so don't try it
-   npx use-preset innocenzi/tailwindcss
-   ```
+Since we added a few steps to the preset, we can try it to see if we didn't do any mistake. For that, we can use Git to reset the repository to the last commit, so we are back to our fresh install:
+
+```bash
+git reset --hard HEAD
+```
+
+Then, we can apply our preset and see if we did not make any mistake:
+
+```bash
+npx use-preset ~/code/presets/vite-tailwindcss
+```
+
+If everything is good, we can go back to the previous step and continue, until we're done with the preset.
+
+### Publish it
+
+Once the preset does everything we want it to, we can make it available for everyone (or just ourselves). For that, you can refer to the [hosting documentation](/docs/guide/hosting/).
+
+When a preset is hosted, it can be used by everyone as long as they have Node installed, which comes with `npx`.
+
+```bash
+npx use-preset use-preset/tailwindcss
+```
