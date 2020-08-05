@@ -16,6 +16,34 @@ For methods not described here, please refer to the corresponding documentation 
 
 ---
 
+### Pending objects
+
+Methods that define actions, for the most part, return pending objects. These are objects to which you can chain additional methods to modify the default behavior of the action. To return to the preset object, use the `chain` method on the pending object.
+
+#### `title`
+
+- **Parameter**: `string`
+
+Defines the title of the action, which will be displayed on the console when using the preset.
+
+#### `if`
+
+- **Parameter**: `function`
+
+Defines whether or not the action should run. The function is given the current [context](/docs/concepts/context/).
+
+#### `chain`
+
+Returns the initial `Preset` object.
+
+#### `before` and `after`
+
+- **Parameter**: `function`
+
+Sets the `before` and `after` action hooks. More information on the [hook documentation](/docs/concepts/hooks).
+
+---
+
 ### `make`
 
 Create the preset. If a string is given, it will be the name of the preset. If an object is given, refer to the [Object API](#objectapi).
