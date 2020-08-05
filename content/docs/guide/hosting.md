@@ -62,6 +62,15 @@ npx use-preset your-username/repository:preset1
 npx use-preset your-username/repository:category/preset2
 ```
 
+## Private repositories
+
+You can use private repositories if you [configured your SSH key](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). To do so, you can add the `ssh:` prefix to the shorthands, or use the full URI with the `git` protocol.
+
+```bash
+npx use-preset ssh:your-username/repository
+npx use-preset git@github.com:your-username/repository.git
+```
+
 ## On Github's Gists
 
 You can install a preset hosted on a Github Gist by using its URL. Not exactly sure why you would want to do that, but you can.
