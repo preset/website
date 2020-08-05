@@ -15,13 +15,14 @@ They are the key concept of Preset. They are easy to use and powerful enough to 
 
 ## Available actions
 
-| Name                                  | Description                                                 |
-| ------------------------------------- | ----------------------------------------------------------- |
-| [Copy](/docs/actions/copy/)           | Helps copying files from the preset to the target directory |
-| [Preset](/docs/actions/preset/)       | Applies other presets                                       |
-| [Edit JSON](/docs/actions/edit-json/) | Edits JSON files in the target directory                    |
-| [Edit](/docs/actions/edit/)           | Edits files in the target directory                         |
-| [Delete](/docs/actions/delete/)       | Deletes files in the target directory                       |
-| [Custom](/docs/actions/custom/)       | Runs arbistrary code                                        |
-| [Prompt](/docs/actions/prompt/)       | Asks the user for information                               |
-| [Run](/docs/actions/run/)             | Runs a system command                                       |
+| Name                                                        | Description                                                 |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| [Copy](/docs/actions/copy/)                                 | Helps copying files from the preset to the target directory |
+| [Preset](/docs/actions/preset/)                             | Applies other presets                                       |
+| [Edit JSON](/docs/actions/edit-json/)                       | Edits JSON files in the target directory                    |
+| [Edit](/docs/actions/edit/)                                 | Edits files in the target directory                         |
+| [Delete](/docs/actions/delete/)                             | Deletes files in the target directory                       |
+| [Custom](/docs/actions/custom/)                             | Runs arbistrary code                                        |
+| [Install dependencies](/docs/actions/install-dependencies/) | Install Node or PHP dependencies                            |
+| [Prompt](/docs/actions/prompt/)                             | Asks the user for information                               |
+| [Run](/docs/actions/run/)                                   | Runs a system command                                       |
