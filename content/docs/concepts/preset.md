@@ -7,7 +7,7 @@ prev: '/docs/basics/getting-started/'
 next: '/docs/concepts/action/'
 ---
 
-## Definition
+## Preset
 
 A preset consists of, at least, a preset file, usually `preset.js`.
 If a `package.json` exists, it can have an optional `preset` key, which value must be the path to the preset file.

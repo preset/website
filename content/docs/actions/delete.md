@@ -7,7 +7,7 @@ prev: '/docs/actions/edit/'
 next: '/docs/actions/custom/'
 ---
 
-## Purpose
+## Delete
 
 A `delete` action can delete files and directories from the target directory.
 

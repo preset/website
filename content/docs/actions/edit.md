@@ -7,7 +7,7 @@ prev: '/docs/actions/edit-json/'
 next: '/docs/actions/delete/'
 ---
 
-## Purpose
+## Edit
 
 An `edit` actions helps working with files' content.
 

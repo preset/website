@@ -7,7 +7,7 @@ prev: '/docs/actions/copy/'
 next: '/docs/actions/edit-json/'
 ---
 
-## Purpose
+## Preset
 
 A `preset` action can apply another preset. Multiple presets can be applied within one preset.
 

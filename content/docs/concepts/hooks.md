@@ -7,7 +7,7 @@ prev: '/docs/concepts/templates/'
 next: '/docs/guide/writing-a-preset/'
 ---
 
-## Definition
+## Hooks
 
 Hooks are methods called at certain points of the execution of a preset. They can run arbitrary code, and are given the current context object.
 

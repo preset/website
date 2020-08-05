@@ -7,7 +7,7 @@ prev: '/docs/actions/preset/'
 next: '/docs/actions/edit/'
 ---
 
-## Purpose
+## Edit JSON
 
 An `edit-json` action can edit a JSON file by merging or removing content. It is useful for adding or removing dependencies from `package.json` or `composer.json` files, but it can be used with an JSON file.
 

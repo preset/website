@@ -7,7 +7,7 @@ prev: '/docs/concepts/context/'
 next: '/docs/concepts/hooks/'
 ---
 
-## Definition
+## Templates
 
 Templates are the files available in a preset. These files may be copied and edited by presets to modify the project the preset is applied on.
 

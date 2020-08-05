@@ -7,7 +7,7 @@ prev: '/docs/guide/hosting/'
 next: '/docs/actions/copy/'
 ---
 
-## Workflow
+## Step-by-step example
 
 Since a preset is meant to perform modifications on an existing project, you will need to know what kind of modifications you want to make.
 

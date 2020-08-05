@@ -7,7 +7,7 @@ prev: '/docs/actions/install-dependencies/'
 next: '/docs/actions/run/'
 ---
 
-## Purpose
+## Prompt
 
 A `prompt` action can ask the user for information. Under the hood, it uses [Enquirer](https://github.com/enquirer/enquirer/).
 

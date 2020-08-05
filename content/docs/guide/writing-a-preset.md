@@ -7,9 +7,11 @@ prev: '/docs/concepts/hooks/'
 next: '/docs/guide/handling-arguments/'
 ---
 
-## Creating the project
+## Writing a preset
 
 In its simplest form, a preset can be just one `preset.js` file. But as soon as you want the safety of typings or the comfort of the fluent API, you will need to add `use-preset` as a development dependency.
+
+## Creating the project
 
 The `preset` preset (_yes_) can do that for you. Run the following command to scaffold a preset project:
 

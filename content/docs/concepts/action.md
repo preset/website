@@ -7,7 +7,7 @@ prev: '/docs/concepts/preset/'
 next: '/docs/concepts/context/'
 ---
 
-## Definition
+## Action
 
 Actions are instructions defined in the preset files. They are a layer of abstraction for diverse kind of manipulations, such as copies, editions, deletions, installations, and more.
 

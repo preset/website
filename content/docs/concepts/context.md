@@ -7,7 +7,7 @@ prev: '/docs/concepts/action/'
 next: '/docs/concepts/templates/'
 ---
 
-## Definition
+## Context
 
 The context object can be accessed by using a closure in multiple methods or objects of the preset definition.
 

@@ -7,7 +7,7 @@ prev: '/docs/actions/prompt/'
 next: '/docs/api/context/'
 ---
 
-## Purpose
+## Run
 
 A `run` action can run a shell command.
 

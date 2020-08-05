@@ -7,7 +7,7 @@ prev: '/docs/actions/custom/'
 next: '/docs/actions/prompt/'
 ---
 
-## Purpose
+## Install dependencies
 
 An `install-dependencies` action can install or update dependencies for the given ecosystem. Currently, it supports the `PHP` ecosystem (`composer`) and the `Node` ecosystem (`yarn` and `npm`).
 

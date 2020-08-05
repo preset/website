@@ -7,7 +7,7 @@ prev: '/docs/actions/delete/'
 next: '/docs/actions/install-dependencies/'
 ---
 
-## Purpose
+## Custom
 
 A `custom` actions allows for custom code to be executed.
 
