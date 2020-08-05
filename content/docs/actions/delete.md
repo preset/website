@@ -3,8 +3,8 @@ title: 'Delete'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/actions/custom/'
-next: '/docs/actions/edit/'
+prev: '/docs/actions/edit/'
+next: '/docs/actions/custom/'
 ---
 
 ## Purpose

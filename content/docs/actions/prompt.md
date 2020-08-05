@@ -3,7 +3,7 @@ title: 'Prompt'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/actions/preset/'
+prev: '/docs/actions/install-dependencies/'
 next: '/docs/actions/run/'
 ---
 

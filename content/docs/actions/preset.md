@@ -3,8 +3,8 @@ title: 'Preset'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/actions/install-dependencies/'
-next: '/docs/actions/prompt/'
+prev: '/docs/actions/copy/'
+next: '/docs/actions/edit-json/'
 ---
 
 ## Purpose

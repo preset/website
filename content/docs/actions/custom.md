@@ -3,8 +3,8 @@ title: 'Custom'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/actions/copy/'
-next: '/docs/actions/delete/'
+prev: '/docs/actions/delete/'
+next: '/docs/actions/install-dependencies/'
 ---
 
 ## Purpose

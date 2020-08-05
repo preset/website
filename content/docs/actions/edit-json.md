@@ -3,8 +3,8 @@ title: 'Edit JSON'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/actions/edit/'
-next: '/docs/actions/install-dependencies/'
+prev: '/docs/actions/preset/'
+next: '/docs/actions/edit/'
 ---
 
 ## Purpose

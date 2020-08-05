@@ -3,8 +3,8 @@ title: 'Edit'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/actions/delete/'
-next: '/docs/actions/edit-json/'
+prev: '/docs/actions/edit-json/'
+next: '/docs/actions/delete/'
 ---
 
 ## Purpose

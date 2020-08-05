@@ -3,8 +3,8 @@ title: 'Install dependencies'
 description: ''
 search: ''
 sidebar: 'docs'
-prev: '/docs/actions/edit-json/'
-next: '/docs/actions/preset/'
+prev: '/docs/actions/custom/'
+next: '/docs/actions/prompt/'
 ---
 
 ## Purpose
