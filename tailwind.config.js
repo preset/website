@@ -32,6 +32,7 @@ module.exports = {
 	variants: {
 		boxShadow: ['focus', 'responsive', 'focus-visible'],
 		typography: ['responsive'],
+		animation: ['motion-safe'],
 	},
 
 	plugins: [
