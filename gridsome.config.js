@@ -83,6 +83,7 @@ module.exports = {
 							'/docs/actions/delete/',
 							'/docs/actions/edit/',
 							'/docs/actions/edit-json/',
+							'/docs/actions/install-dependencies/',
 							'/docs/actions/preset/',
 							'/docs/actions/prompt/',
 							'/docs/actions/run/',

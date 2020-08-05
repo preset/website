@@ -4,7 +4,7 @@ description: ''
 search: ''
 sidebar: 'docs'
 prev: '/docs/actions/edit/'
-next: '/docs/actions/preset/'
+next: '/docs/actions/install-dependencies/'
 ---
 
 ## Purpose
