@@ -53,7 +53,17 @@ module.exports = Preset.make({
 });
 ```
 
+## Tip: archiving edited files
+
+When creating a preset from a test project, if you committed its initial state and started editing it, you can use `git diff` to list the modified files.
+
+Combined with `git archive`, you can zip up all of the files you edited so you can unzip them in the templates directory of your preset.
+
+```bash
+git archive -o update.zip HEAD $(git diff --diff-filter=M --name-only)
+```
+
 ## Then...
 
 - You can learn more about both syntaxes in the [preset API documentation](/docs/api/preset/).
-- You can read the [guide](/docs/guide/) to see an example of the process to create a preset.
+- You can read the [guide](/docs/guide/step-by-step-example) to see an example of the process to create a preset.
