@@ -74,6 +74,26 @@ module.exports = Preset.make('My preset')
 
 ---
 
+#### `indentWith`
+
+- **Parameter**: `string` or `number`
+
+  The `space` property of the [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method.
+
+<!-- prettier-ignore -->
+```js
+module.exports = Preset.make('My preset')
+  .editJson('package.json')
+    .delete([
+      'devDependencies.sass',
+      'devDependencies.sass-loader',
+    ])
+    .indentWith('  ')
+    .chain()
+```
+
+---
+
 ## Object API
 
 ### `file`
@@ -100,3 +120,12 @@ This property should be an object which will be recusrively merged with every ma
 - `Default`: `[]`
 
 This property should be a string or an array of strings that represent a path to a JSON property. Each of these paths will be deleted from the matched files. Under the hood, it uses Lodash's `unset`.
+
+---
+
+### `space`
+
+- `Type`: `string` or `number`
+- `Default`: `\t`
+
+The `space` property of the [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method.
