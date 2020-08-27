@@ -49,7 +49,7 @@ The type of installation.
 - **Parameter**: `bool`
 - **Default**: `true`
 
-Whether or not to perform the installation without asking for user confirmation. If omitted, confirmation will be asked.
+Whether or not to perform the installation without asking for user confirmation. If omitted, confirmation will be asked. If the given parameter is false, confirmation **will** be asked.
 
 ---
 
