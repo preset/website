@@ -115,7 +115,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 @import '~prism-themes/themes/prism-nord.css';
 
 h1,
@@ -135,6 +135,12 @@ h4 {
 			padding-right: 1em;
 			@apply text-brand-muted absolute opacity-0 float-left;
 		}
+	}
+}
+
+.hint {
+	&.tip {
+		@apply bg-button text-on-button-hover px-4 py-2 rounded-md;
 	}
 }
 </style>

@@ -7948,6 +7948,13 @@ remark-fix-guillemets@^1.0.15:
   dependencies:
     unist-util-visit "^2.0.1"
 
+remark-hint@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/remark-hint/-/remark-hint-1.0.9.tgz#434d794d7b6d9f035225c45341ef97725070cdbe"
+  integrity sha512-XLif/VoJ7CZ+ZcflWnTV60fHPuMLe/GN+iJD4qpEcwbM/Ytl9ZtFTq35IjlFhWMP34oeThBYL48k12qu0pFKSQ==
+  dependencies:
+    unist-builder "^2.0.3"
+
 remark-html@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/remark-html/-/remark-html-8.0.0.tgz#9fcb859a6f3cb40f3ef15402950f1a62ec301b3a"
@@ -9371,6 +9378,11 @@ unist-builder@^1.0.1, unist-builder@^1.0.4:
   integrity sha512-v6xbUPP7ILrT15fHGrNyHc1Xda8H3xVhP7/HAIotHOhVPjH5dCXA097C3Rry1Q2O+HbOLCao4hfPB+EYEjHgVg==
   dependencies:
     object-assign "^4.1.0"
+
+unist-builder@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/unist-builder/-/unist-builder-2.0.3.tgz#77648711b5d86af0942f334397a33c5e91516436"
+  integrity sha512-f98yt5pnlMWlzP539tPc4grGMsFaQQlP/vM396b00jngsiINumNmsY8rkXjfoi1c6QaM8nQ3vaGDuoKWbe/1Uw==
 
 unist-util-generated@^1.1.0:
   version "1.1.6"
