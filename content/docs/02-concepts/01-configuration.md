@@ -23,7 +23,7 @@ Configuration files named `preset.js` or `preset.ts` at the root of the project 
 
 ## Singleton
 
-A preset is configured via the `Preset` singleton exported by `use-preset`:
+The configuration is made via the `Preset` singleton exported by `use-preset`:
 
 ```ts
 // preset.ts
@@ -34,3 +34,5 @@ Preset.extract();
 ```
 
 You can import [vanilla Node modules](https://nodejs.org/docs/latest-v13.x/api/), but you can't use external dependencies, because they are not installed after the preset is cloned.
+
+!> See the [configuration API](/docs/api/preset).
