@@ -47,6 +47,13 @@ module.exports = {
 				url: process.env.GITHUB_URL || false,
 				icon: 'github',
 			},
+			{
+				id: 'discord',
+				name: 'Discord',
+				title: 'Join the Discord server',
+				url: process.env.DISCORD_URL || false,
+				icon: 'discord',
+			},
 		],
 	},
 

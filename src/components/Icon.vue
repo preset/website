@@ -8,6 +8,7 @@ import menu from '@iconify/icons-bx/bx-menu';
 import cross from '@iconify/icons-bx/bx-x';
 import twitter from '@iconify/icons-bx/bxl-twitter';
 import github from '@iconify/icons-bx/bxl-github';
+import discord from '@iconify/icons-bx/bxl-discord';
 import sunOutline from '@iconify/icons-bx/bx-sun';
 import sunSolid from '@iconify/icons-bx/bxs-sun';
 import leftArrow from '@iconify/icons-bx/bx-left-arrow-alt';
@@ -23,6 +24,7 @@ Object.entries({
 	cross,
 	twitter,
 	github,
+	discord,
 	dark: sunOutline,
 	light: sunSolid,
 	close,
