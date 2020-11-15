@@ -1,12 +1,5 @@
 module.exports = (theme) => {
 	return {
-		lg: {
-			css: {
-				h1: {
-					fontSize: '2.5rem',
-				},
-			},
-		},
 		default: {
 			css: {
 				color: theme('colors.on-background.default'),

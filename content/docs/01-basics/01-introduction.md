@@ -4,7 +4,7 @@ description: ''
 search: ''
 ---
 
-# Introduction
+## Introduction
 
 Preset is a system that makes it easy to perform modifications on a freshly scaffolded project.
 
