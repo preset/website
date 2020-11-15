@@ -116,7 +116,7 @@ export default {
 </script>
 
 <style>
-@import '~prism-themes/themes/prism-material-oceanic.css';
+@import '~prism-themes/themes/prism-nord.css';
 
 h1,
 h2,
