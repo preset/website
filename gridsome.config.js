@@ -15,6 +15,15 @@ module.exports = {
 		touchicon: './src/assets/favicon.png',
 	},
 
+	templates: {
+		MarkdownPage: [
+			{
+				// Removes the digits in the urls, used to order stuff in the source code
+				path: (node) => node.path.replace(/(\d{2}-)/g, ''),
+			},
+		],
+	},
+
 	settings: {
 		links: [
 			{
@@ -37,68 +46,6 @@ module.exports = {
 				title: 'Visit the repositories',
 				url: process.env.GITHUB_URL || false,
 				icon: 'github',
-			},
-		],
-		sidebar: [
-			{
-				name: 'docs',
-				sections: [
-					{
-						id: 'basics',
-						title: 'Basics',
-						items: [
-							//
-							'/docs/basics/introduction/',
-							'/docs/basics/getting-started/',
-							'/docs/basics/alternatives/',
-						],
-					},
-					{
-						id: 'concepts',
-						title: 'Concepts',
-						items: [
-							'/docs/concepts/preset/',
-							'/docs/concepts/action/',
-							'/docs/concepts/context/',
-							'/docs/concepts/templates/',
-							'/docs/concepts/hooks/',
-						],
-					},
-					{
-						id: 'guide',
-						title: 'Guide',
-						items: [
-							'/docs/guide/writing-a-preset/',
-							'/docs/guide/handling-arguments/',
-							'/docs/guide/hosting/',
-							'/docs/guide/step-by-step-example/',
-						],
-					},
-					{
-						id: 'actions',
-						title: 'Actions',
-						items: [
-							'/docs/actions/copy/',
-							'/docs/actions/preset/',
-							'/docs/actions/edit-json/',
-							'/docs/actions/edit/',
-							'/docs/actions/delete/',
-							'/docs/actions/custom/',
-							'/docs/actions/install-dependencies/',
-							'/docs/actions/prompt/',
-							'/docs/actions/run/',
-						],
-					},
-					{
-						id: 'api',
-						title: 'API reference',
-						items: [
-							//
-							'/docs/api/context/',
-							'/docs/api/preset/',
-						],
-					},
-				],
 			},
 		],
 	},

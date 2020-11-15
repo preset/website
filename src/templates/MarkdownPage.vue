@@ -6,7 +6,7 @@
 					<article class="prose prose-dark lg:prose-lg " v-html="$page.markdownPage.content" />
 
 					<div class="mt-12">
-						<bottom-page-links />
+						<!-- <bottom-page-links /> -->
 					</div>
 				</div>
 			</div>
@@ -25,9 +25,6 @@ query ($id: ID!) {
     path
     timeToRead
     content
-    sidebar
-    next
-    prev
     headings {
       depth
       value
@@ -47,14 +44,14 @@ query ($id: ID!) {
 
 <script>
 import DocumentationLayout from '@/layouts/Documentation';
-import BottomPageLinks from '@/components/documentation/BottomPageLinks';
+// import BottomPageLinks from '@/components/documentation/BottomPageLinks';
 import OnThisPage from '@/components/documentation/OnThisPage';
 import zoom from 'medium-zoom';
 
 export default {
 	components: {
 		DocumentationLayout,
-		BottomPageLinks,
+		// BottomPageLinks,
 		OnThisPage,
 	},
 
