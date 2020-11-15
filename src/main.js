@@ -39,9 +39,8 @@ export default function(Vue, { router, head, isClient }) {
 					categories
 						.find(({ name }) => name === categoryFromNode(node).name)
 						.links.push({
+							...node,
 							order: node.fileInfo.name.split('-').shift(),
-							title: node.title,
-							path: node.path,
 							current: node.path.includes(current.path),
 						});
 				});
