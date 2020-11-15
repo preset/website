@@ -10,7 +10,7 @@
 					:key="`${page.path}${heading.anchor}`"
 					class="text-on-sidebar-header"
 					:class="{
-						'font-medium': heading.depth === 2,
+						'font-medium': heading.depth === 1,
 						[`depth-${heading.depth}`]: true,
 					}"
 				>
@@ -24,10 +24,11 @@
 							'transition-all duration-200',
 							'transform hover:translate-x-1',
 							'focus:shadow-none focus:text-on-sidebar',
-							heading.depth === 3 ? 'pl-2' : '',
-							heading.depth === 4 ? 'pl-3' : '',
-							heading.depth === 5 ? 'pl-4' : '',
-							heading.depth === 6 ? 'pl-5' : '',
+							heading.depth === 2 ? 'pl-2' : '',
+							heading.depth === 3 ? 'pl-4' : '',
+							heading.depth === 4 ? 'pl-5' : '',
+							heading.depth === 5 ? 'pl-6' : '',
+							heading.depth === 6 ? 'pl-7' : '',
 							activeAnchor === heading.anchor ? 'font-bold text-brand' : '',
 						]"
 					>
@@ -51,7 +52,7 @@ export default {
 			return this.$page.markdownPage;
 		},
 		headings() {
-			return this.page.headings.filter((h) => h.depth > 1);
+			return this.page.headings; //.filter((h) => h.depth > 1);
 		},
 	},
 

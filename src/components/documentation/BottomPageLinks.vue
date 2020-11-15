@@ -52,26 +52,40 @@ export default {
 	},
 
 	computed: {
-		page() {
-			return this.$page.markdownPage;
+		links() {
+			return this.categories.map(({ links }) => links).flat();
 		},
-		pages() {
-			return this.$page.allMarkdownPage.edges.map((edge) => edge.node);
+		indexOfCurrent() {
+			return this.links.findIndex(({ current }) => current === true);
 		},
 		next() {
-			if (this.pages && !this.page.next) {
-				return false;
+			if (this.links.length > this.indexOfCurrent) {
+				return this.links[this.indexOfCurrent + 1];
 			}
-
-			return this.pages.find((page) => page.path === this.page.next);
 		},
 		prev() {
-			if (this.pages && !this.page.prev) {
-				return false;
+			if (0 <= this.indexOfCurrent - 1) {
+				return this.links[this.indexOfCurrent - 1];
 			}
-
-			return this.pages.find((page) => page.path === this.page.prev);
 		},
 	},
 };
 </script>
+
+<static-query>
+query Sidebar {
+	allMarkdownPage {
+    edges {
+      node {
+        path
+        title
+        fileInfo {
+          name
+          path
+          directory
+        }
+      }
+    }
+  }
+}
+</static-query>

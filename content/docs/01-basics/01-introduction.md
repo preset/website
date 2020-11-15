@@ -4,7 +4,7 @@ description: ''
 search: ''
 ---
 
-## Introduction
+# Introduction
 
 Preset is a system that makes it easy to perform modifications on a freshly scaffolded project.
 
@@ -22,8 +22,12 @@ The features of the boilerplate have to be well-documented, but even then, the u
 
 As a maintainer, it can be hard as well to keep track of the changes that have been made to the original codebase. It can be easy to forget something in an update, and dead code can be introduced this way.
 
+Lastly, a project needs to be created from the boilerplate. You can't create a project like you usually do, then consume the boilerplate on top of it.
+
+It also means that if the boilerplate is not actively maintained compared to the project it is built for, it will quickly be out-of-date.
+
 ### Solution
 
 A preset, on the other hand, describes the exact changes needed for the features to be added. By reading the preset's code, you know the exact changes it brings.
 
-This solves the previous issue, and makes the maintenance easier, because the overhead caused by all of the files of a boilerplate is gone.
+This solves the previous issue, and makes the maintenance easier, because the overhead caused by all of the files of a boilerplate is gone, and as a preset maintainer, you don't have to maintain every other single file that doesn't change in the preset but needs updates because the project on top of which the boilerplate is made is updated.
