@@ -4,7 +4,7 @@ description: ''
 search: ''
 ---
 
-## File
+## Configuration file
 
 A preset consists of at least a configuration file, usually `preset.js` or `preset.ts`. If a `package.json` exists, it can have a `preset` key, which value must be the relative path to the configuration file.
 
@@ -21,7 +21,7 @@ A preset consists of at least a configuration file, usually `preset.js` or `pres
 
 Configuration files named `preset.js` or `preset.ts` at the root of the project or in the `src` directory are automatically discovered.
 
-## Configuration
+## Singleton
 
 A preset is configured via the `Preset` singleton exported by `use-preset`:
 
