@@ -2,15 +2,17 @@
 title: 'Using context'
 ---
 
-## Callbacks
+## Context-aware parameters
 
-Almost every parameter in the API can receive a callback that takes the `Preset` object.
+Almost every parameter in the `Preset` API can receive a callback that takes the current, updated `Preset` object.
+
+!> Learn more in the [`Preset`](/api/preset/#context-aware-parameters) documentation.
 
 ## Context object
 
 The `context` object is accessible via the `Preset` singleton and can persist information throughout the lifecycle of the preset. Since actions are ran individually, instead of parsing the data each time, you can persist it and reuse it later.
 
-A good way to do this is to use the [hook](/docs/actions/hook) action:
+A good place to do this is the [hook](/docs/actions/hook) action:
 
 ```ts
 Preset.hook(({ context, args, options }) => {

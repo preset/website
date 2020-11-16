@@ -56,8 +56,6 @@ export default function(Vue, { router, head, isClient }) {
 	router.beforeEach((to, _from, next) => {
 		const redirections = {
 			'/docs/': '/docs/basics/introduction/',
-			'/docs/basics/': '/docs/basics/introduction/',
-			'/docs/concepts/': '/docs/concepts/action/',
 		};
 
 		if (Reflect.has(redirections, to?.path)) {

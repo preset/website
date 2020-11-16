@@ -139,8 +139,15 @@ h4 {
 }
 
 .hint {
+	&.tip,
+	&.warn {
+		@apply px-4 py-2 rounded-md my-6;
+	}
 	&.tip {
-		@apply bg-button text-on-button-hover px-4 py-2 rounded-md;
+		@apply bg-button text-on-button-hover;
+	}
+	&.warn {
+		@apply bg-button text-on-button-hover;
 	}
 }
 </style>
