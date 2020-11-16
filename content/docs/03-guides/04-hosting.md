@@ -23,21 +23,19 @@ npx use-preset https://github.com/your-organization/your-cool-preset
 
 ## Community organizations
 
-A prefix is assigned to community organizations, as a way to make the syntax easier to remember.
+In order to create an easy-to-remember syntax, organizations may have a prefix assigned to them.
 
 ```bash
 npx use-preset prefix:repository
 ```
 
-### Current community organizations
+Prefixes may not be necessary if your organization name is short enough, but if you grow a community and you would like a prefix for its presets, feel free to create a pull request to add it.
 
-The list of supported organizations is below.
+**Current list**:
 
 | Prefix    | GitHub organization                                     |
 | --------- | ------------------------------------------------------- |
 | `laravel` | [`laravel-presets`](https://github.com/laravel-presets) |
-
-!> If you grow a community which offer multiple presets, feel free to create a pull request to add your own organization.
 
 ## Mono-repositories
 
