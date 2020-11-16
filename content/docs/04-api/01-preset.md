@@ -120,7 +120,7 @@ Contains the command-line flags. Flags can be boolean values or string. Boolean 
 | `--no-auth`   | `{ auth: false }`  |
 | `--mode auth` | `{ mode: 'auth' }` |
 
-!> Under the hood, this feature uses [CAC](https://github.com/cacjs/cac) by [Egoist](https://twitter.com/_egoistlily).
+!> Under the hood, this feature uses [C.C.](https://github.com/cacjs/cac) by [Egoist](https://twitter.com/_egoistlily).
 
 ---
 
