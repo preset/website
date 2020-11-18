@@ -59,7 +59,7 @@ export default {
 	},
 
 	data: () => ({
-		command: stripIndent(`npx use-preset my-preset`),
+		command: stripIndent(`npx use-preset my-username/my-preset`),
 		code: stripIndent(`
 			import { Preset } from 'use-preset'
 
