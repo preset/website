@@ -26,3 +26,15 @@ npx use-preset laravel:frontend <directory> <name>
 ```
 
 !> Read the [hosting](/docs/guides/hosting/#community-organizations) documentation to learn more about the `prefix:repository` syntax.
+
+## Laravel presets
+
+The [Laravel Presets](https://github.com/laravel-presets) will offer community-maintained presets specifically made for Laravel.
+
+They can be used with the `laravel:preset-name` syntax:
+
+```shell
+npx use-preset laravel:tailwindcss
+```
+
+!> Shout me a [direct message](https://twitter.com/enzoinnocenzi) if you want your preset to be added to the organization.
