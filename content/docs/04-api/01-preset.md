@@ -85,6 +85,33 @@ Preset.option('extra', false);
 
 ---
 
+### `instruct`
+
+Adds properly-formatted instructions when the preset has been applied.
+
+<!-- prettier-ignore -->
+```ts
+import { Preset, color } from `use-preset`;
+
+Preset.instruct([
+	`Run ${color.magenta('yarn run')} to start development.`,
+	`Read the documentation at https://usepreset.dev.`,
+]);
+```
+
+This method returns an object which contains an additional method, `withHeading`, which takes a string parameter that defines the title of the instruction block.
+
+<!-- prettier-ignore -->
+```ts
+import { Preset, color } from `use-preset`;
+
+Preset.instruct([
+	`Run ${color.magenta('yarn run')} to start development.`,
+]).withHeading("What's next?");
+```
+
+---
+
 ### `isInteractive`
 
 Returns true if the preset is interactive. A preset is determed to be interactive if `process.stdout.isTTY` is false _and_ `--interaction` is not passed.
