@@ -27,7 +27,7 @@
 			</div>
 
 			<!-- Right -->
-			<div class="w-full space-y-8 lg:w-1/2">
+			<div class="w-full space-y-8 text-lg lg:w-1/2">
 				<pre class="rounded-lg shadow-xl prism language-js"><code class="language-js">{{ code }}</code></pre>
 				<pre class="rounded-lg shadow-xl prism language-bash"><code class="language-bash">{{ command }}</code></pre>
 			</div>
@@ -36,7 +36,7 @@
 </template>
 
 <style lang="postcss">
-@import '~prism-themes/themes/prism-material-oceanic.css';
+@import '~prism-themes/themes/prism-nord.css';
 </style>
 
 <script>
@@ -61,23 +61,18 @@ export default {
 	data: () => ({
 		command: stripIndent(`npx use-preset my-preset`),
 		code: stripIndent(`
-      const { Preset } = require('use-preset');
+			import { Preset } from 'use-preset'
 
-      module.exports = Preset.make('My preset')
-        // Copy the templates
-        .copyTemplates()
+			// Extracts the preset's templates
+			Preset.extract()
 
-        // Edit the package.json file
-        .editJson('package.json')
-          .merge({
-            devDependencies: {
-              tailwindcss: '^1.6'
-            }
-          })
-          .chain()
+			// Updates the package.json file
+			Preset.editNodePackages()
+				.add('tailwindcss', '^2.0')
+				.remove('sass')
 
-        // Run yarn or npm install
-        .installDependencies();
+			// Runs yarn or npm install
+			Preset.installDependencies()
     `).trim(),
 	}),
 };

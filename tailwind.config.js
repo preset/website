@@ -13,6 +13,7 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ['Inter var', ...fontFamily.sans],
+				code: ['Fira Code'],
 			},
 			inset: {
 				10: '4.5rem',
