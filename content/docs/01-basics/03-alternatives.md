@@ -1,16 +1,16 @@
 ---
 title: 'Alternatives'
-description: ''
-search: ''
 ---
 
 ## Alternatives
 
-Preset isn't exactly the first tool in its category. Alternatives are available, each having their pros and cons. But Preset is the first tool to actually focus on modifying existing projects. The projects listed below are scaffolding tools that you may want to know about.
+Preset isn't the first tool scaffolding tool to see the day.
+
+Alternatives are available, each having their pros and cons. But Preset is the first one to actually focus on **modifying existing projects**. The projects listed below are scaffolding tools that you may want to know about.
 
 ### SAO
 
-[SAO](https://github.com/saojs/sao) is a scaffolding tool which inspired Preset a lot. It looks similar on paper, but there is a fundamental difference: SAO was made for scaffolding, while Preset is meant for editing already scaffolded projects—even though it can do both.
+[SAO](https://github.com/saojs/sao) inspired Preset quite a bit. It looks similar on paper, but there is a fundamental difference: SAO was made for scaffolding, while Preset is meant for editing already scaffolded projects—even though it can do both.
 
 While SAO is useful, it doesn't answer the same needs. It is closer to [Yeoman](http://yeoman.io/).
 
