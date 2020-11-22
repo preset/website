@@ -38,7 +38,7 @@ The [`TALL`](https://github.com/laravel-frontend-presets/tall) preset also has i
 
 ## Laravel presets
 
-The [Laravel Presets](https://github.com/laravel-presets) will offer community-maintained presets specifically made for Laravel.
+The [Laravel Presets](https://github.com/laravel-presets) organization will offer community-maintained presets specifically made for Laravel.
 
 They can be used with the `laravel:preset-name` syntax:
 
