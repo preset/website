@@ -25,6 +25,15 @@ You can use this one-liner:
 npx use-preset laravel:frontend <directory> <name>
 ```
 
+Additionally, you can install [Laravel Breeze](https://github.com/laravel/breeze) with the `--breeze` flag or by using `breeze` as the preset name:
+
+```bash
+npx use-preset laravel:frontend --breeze
+npx use-preset laravel:frontend my-laravel-app breeze
+```
+
+The [`TALL`](https://github.com/laravel-frontend-presets/tall) preset also has its `--tall` flag because it does not depend on `laravel/ui`, so it can be uninstalled after being applied.
+
 !> Read the [hosting](/docs/guides/hosting/#community-organizations) documentation to learn more about the `prefix:repository` syntax.
 
 ## Laravel presets
