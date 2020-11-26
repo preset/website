@@ -114,7 +114,7 @@ Preset.instruct([
 
 ### `isInteractive`
 
-Returns true if the preset is interactive. A preset is determed to be interactive if `process.stdout.isTTY` is false _and_ `--interaction` is not passed.
+Returns true if the preset is interactive. A preset is determined to be interactive if `process.stdout.isTTY` is false _and_ `--interaction` is not passed.
 If `--interaction` is given, the interactive mode is forcefully enabled.
 
 This option is useful for testing a preset in a Continuous Interaction pipeline.

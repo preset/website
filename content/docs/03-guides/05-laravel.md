@@ -6,7 +6,7 @@ title: 'Laravel'
 
 [Laravel Frontend Preset](https://github.com/laravel-frontend-presets) is an amazing concept that allows for exactly the same as Preset does, but only for Laravel projects.
 
-Preset is born from the desire to simplify the development, publication and usage of a preset. Additionnaly, it was designed to be available for all ecosystems, not only PHP.
+Preset is born from the desire to simplify the development, publication and usage of a preset. Additionally, it was designed to be available for all ecosystems, not only PHP.
 
 ## One-liner for front-end presets
 
