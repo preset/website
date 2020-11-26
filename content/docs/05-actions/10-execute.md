@@ -8,7 +8,7 @@ This action can execute shell commands in the target project's directory.
 
 ## Initialization
 
-Call the `execute` method on the `Peeset` singleton. The first parameter should be the program or command name, and the following parameter is variadic and represents the arguments.
+Call the `execute` method on the `Preset` singleton. The first parameter should be the program or command name, and the following parameter is variadic and represents the arguments.
 
 ```ts
 // Will run `composer create-project laravel/laravel`
