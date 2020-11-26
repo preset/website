@@ -110,7 +110,7 @@ export default {
 
 	data: () => ({
 		isNavigationOpen: false,
-		isMac: /Mac/.test(navigator.platform),
+		isMac: /Mac/.test(window.navigator.platform),
 	}),
 
 	computed: {
