@@ -16,7 +16,7 @@
 				<!-- Search -->
 				<div class="w-full max-w-md md:mr-6">
 					<ClientOnly>
-						<Search placeholder="Search (Ctrl + K)" />
+						<Search :placeholder="`Search (${controlKey} + K)`" />
 					</ClientOnly>
 				</div>
 
@@ -96,8 +96,7 @@ import ThemeManager from '@/components/ThemeManager';
 import Icon from '@/components/Icon';
 import Logo from '@/components/Logo';
 
-const Search = () =>
-	import(/* webpackChunkName: "search" */ '@/components/Search').catch((error) => console.warn(error));
+const Search = () => import(/* webpackChunkName: "search" */ '@/components/Search').catch((error) => console.warn(error));
 
 export default {
 	components: {
@@ -117,6 +116,9 @@ export default {
 		},
 		links() {
 			return this.meta.settings.links;
+		},
+		controlKey() {
+			return process.isClient && /Mac/.test(window?.navigator.platform) ? 'Cmd' : 'Ctrl';
 		},
 	},
 
