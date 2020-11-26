@@ -46,7 +46,7 @@ Specify the behavior the action should have when a target file already exists. T
 - `skip`: will skip the file
 - `override`: will override the file
 
-By default, files will be overriden.
+By default, files will be overridden.
 
 ```ts
 Preset.extract().whenConflict('ask');
