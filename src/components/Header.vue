@@ -16,7 +16,8 @@
 				<!-- Search -->
 				<div class="w-full max-w-md md:mr-6">
 					<ClientOnly>
-						<Search placeholder="Search (Ctrl + K)" />
+					  <Search placeholder="Search (Cmd + K)" v-if="isMac" />
+						<Search placeholder="Search (Ctrl + K)" v-else />
 					</ClientOnly>
 				</div>
 
@@ -109,6 +110,7 @@ export default {
 
 	data: () => ({
 		isNavigationOpen: false,
+		isMac: /Mac/.test(navigator.platform),
 	}),
 
 	computed: {
