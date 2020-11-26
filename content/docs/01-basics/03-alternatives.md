@@ -22,6 +22,6 @@ The main con with Yeoman is that it is quite complex to dive into. Additionally,
 
 ### Plop
 
-[Plop](https://github.com/plopjs/plop) is a generator that is meant to be installed as a project dependency. Plops looks for a `plopfile` in the project it is installed, which defines all of the generators it has access to.
+[Plop](https://github.com/plopjs/plop) is a generator that is meant to be installed as a project dependency. Plop looks for a `plopfile` in the project it is installed, which defines all of the generators it has access to.
 
 Everything is local to a project... which means Preset could actually be used to scaffold a `plopfile`.
