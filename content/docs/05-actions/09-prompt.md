@@ -39,7 +39,7 @@ The third one is an optional context-aware boolean defining the default value of
 The last one is an [Enquirer option object](https://github.com/enquirer/enquirer#prompt-options).
 
 ```ts
-Preset.input('username', 'Install ESLint?', true);
+Preset.confirm('username', 'Install ESLint?', true);
 ```
 
 ---
