@@ -64,3 +64,15 @@ Preset.extract().from('directory');
 // Same as
 Preset.extract('directory');
 ```
+
+---
+
+### `withDots`
+
+Allows for extracting files or directory starting with a dot. Without this option, files like `.gitignore` or `.vscode` will be ignored.
+
+However, files ending with `.dotfile` will always be copied (eg. `gitignore.dotfile` will be extracted as `.gitignore`), so you may not need this option.
+
+```ts
+Preset.extract().withDots();
+```
