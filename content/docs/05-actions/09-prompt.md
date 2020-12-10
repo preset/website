@@ -12,7 +12,7 @@ This action allows for asking information to the user. Under the hood, it uses [
 
 Ask text to the user.
 
-The first parameter is the name of the value, which is stored in the [`preset.prompts`](http://localhost:8080/docs/api/preset/#prompts) object.
+The first parameter is the name of the value, which is stored in the [`preset.prompts`](/docs/api/preset/#prompts) object.
 
 The second parameter is a context-aware string, which will be displayed as the question to the user.
 
@@ -30,7 +30,7 @@ Preset.input('username', 'What is your username?', 'Jon Doe');
 
 Asks confirmation to the user.
 
-The first parameter is the name of the value, which is stored in the [`preset.prompts`](http://localhost:8080/docs/api/preset/#prompts) object.
+The first parameter is the name of the value, which is stored in the [`preset.prompts`](/docs/api/preset/#prompts) object.
 
 The second parameter is a context-aware string, which will be displayed as the question to the user.
 
@@ -60,7 +60,7 @@ Preset.prompt()
 
 Adds another prompt in the same action. If you need to ask more than one question, you can use it to avoid having to create another action.
 
-The first parameter is the name of the value, which is stored in the [`preset.prompts`](http://localhost:8080/docs/api/preset/#prompts) object, and the second is an [Enquirer option object](https://github.com/enquirer/enquirer#prompt-options).
+The first parameter is the name of the value, which is stored in the [`preset.prompts`](/docs/api/preset/#prompts) object, and the second is an [Enquirer option object](https://github.com/enquirer/enquirer#prompt-options).
 
 ```ts
 Preset.prompt().add('username', {
