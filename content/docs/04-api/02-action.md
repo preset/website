@@ -34,15 +34,15 @@ Preset.extract().ifOptionEquals('extract', true);
 
 ---
 
-### `ifHasOption`
+### `ifOption`
 
-Runs the action if the specified option is defined, regardless of its value.
+Runs the action if the specified option is truthy.
 
 **Example**
 
 ```ts
 // Will even run if --extract is not a boolean
-Preset.extract().ifHasOption('extract');
+Preset.extract().ifOption('extract');
 ```
 
 ---
@@ -57,6 +57,32 @@ Runs the action if the specified option is defined and is falsy.
 // Will NOT run if --preserve is given,
 // but WILL run if --no-preserve is given
 Preset.extract().ifNotOption('preserve');
+```
+
+---
+
+### `ifPrompt`
+
+Runs the action if the specified prompt is truthy.
+
+**Example**
+
+```ts
+Preset.confirm('extract', 'Extract templates?');
+Preset.extract().ifPrompt('extract');
+```
+
+---
+
+### `ifNotPrompt`
+
+Runs the action if the specified prompt is defined and is falsy.
+
+**Example**
+
+```ts
+Preset.confirm('skip', 'Skip template extraction?');
+Preset.extract().ifNotPrompt('skip');
 ```
 
 ---
