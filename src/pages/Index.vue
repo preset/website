@@ -18,7 +18,7 @@
 						Get started
 					</g-link>
 					<a
-						href="https://github.com/use-preset/awesome-presets"
+						href="https://github.com/preset/awesome"
 						class="px-4 py-3 mt-8 text-lg font-semibold transition-colors duration-200 rounded-lg bg-button text-on-button"
 					>
 						Browse presets
@@ -59,9 +59,9 @@ export default {
 	},
 
 	data: () => ({
-		command: stripIndent(`npx use-preset my-username/my-preset`),
+		command: stripIndent(`npx apply my-username/my-preset`),
 		code: stripIndent(`
-			import { Preset } from 'use-preset'
+			import { Preset } from 'apply'
 
 			// Extracts the preset's templates
 			Preset.extract()

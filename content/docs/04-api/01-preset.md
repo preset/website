@@ -4,10 +4,10 @@ title: Preset
 
 ## The `Preset` object
 
-The `Preset` object is a [singleton](https://en.wikipedia.org/wiki/Singleton_pattern) exported by the `use-preset` dependency. Every action is created from that object.
+The `Preset` object is a [singleton](https://en.wikipedia.org/wiki/Singleton_pattern) exported by the `apply` dependency. Every action is created from that object.
 
 ```ts
-import { Preset } from 'use-preset';
+import { Preset } from 'apply';
 
 // This method returns an Extract object
 // to further configure the action
@@ -91,7 +91,7 @@ Adds properly-formatted instructions when the preset has been applied.
 
 <!-- prettier-ignore -->
 ```ts
-import { Preset, color } from `use-preset`;
+import { Preset, color } from `apply`;
 
 Preset.instruct([
 	`Run ${color.magenta('yarn run')} to start development.`,
@@ -103,7 +103,7 @@ This method returns an object which contains an additional method, `withHeading`
 
 <!-- prettier-ignore -->
 ```ts
-import { Preset, color } from `use-preset`;
+import { Preset, color } from `apply`;
 
 Preset.instruct([
 	`Run ${color.magenta('yarn run')} to start development.`,

@@ -14,7 +14,7 @@ A preset consists of at least a configuration file, usually `preset.js` or `pres
 	"license": "MIT",
 	"preset": "src/preset.ts",
 	"devDependencies": {
-		"use-preset": "^0.2"
+		"apply": "^0.0.1"
 	}
 }
 ```
@@ -23,11 +23,11 @@ Configuration files named `preset.js` or `preset.ts` at the root of the project 
 
 ## Singleton
 
-The configuration is made via the `Preset` singleton exported by `use-preset`:
+The configuration is made via the `Preset` singleton exported by `apply`:
 
 ```ts
 // preset.ts
-import { Preset } from 'use-preset';
+import { Preset } from 'apply';
 
 Preset.setName('My preset');
 Preset.extract();

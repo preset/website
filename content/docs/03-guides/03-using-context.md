@@ -42,6 +42,6 @@ Preset.execute('php')
 In the example above, you can call the preset like the following, and it will run a dynamic `php artisan` command.
 
 ```bash
-# npx use-preset laravel:frontend . tall --auth
+# npx apply laravel:frontend . tall --auth
 php artisan ui tall --auth
 ```

@@ -12,7 +12,7 @@ By default, the template directory is `/templates` at the root of a preset proje
 
 ```ts
 // preset.ts
-import { Preset } from 'use-preset';
+import { Preset } from 'apply';
 
 Preset.setName('My preset');
 Preset.setTemplateDirectory('stubs');

@@ -12,13 +12,13 @@ You can install a preset by using its GitHub URL or shorthand.
 
 ```bash
 # Shorthand
-npx use-preset your-organization/your-cool-preset
+npx apply your-organization/your-cool-preset
 
 # Full URL
-npx use-preset git@github.com:your-organization/your-cool-preset
+npx apply git@github.com:your-organization/your-cool-preset
 
 # Without SSH
-npx use-preset https://github.com/your-organization/your-cool-preset
+npx apply https://github.com/your-organization/your-cool-preset
 ```
 
 ## Community organizations
@@ -26,7 +26,7 @@ npx use-preset https://github.com/your-organization/your-cool-preset
 In order to create an easy-to-remember syntax, organizations may have a prefix assigned to them.
 
 ```bash
-npx use-preset prefix:repository
+npx apply prefix:repository
 ```
 
 Prefixes may not be necessary if your organization name is short enough, but if you grow a community and you would like a prefix for its presets, feel free to create a pull request to add it.
@@ -55,10 +55,10 @@ You can use the presets in it with the following commands:
 
 ```bash
 # Install /preset1
-npx use-preset your-username/repository --path preset1
+npx apply your-username/repository --path preset1
 
 # Install /category/preset1
-npx use-preset your-username/repository --path category/preset2
+npx apply your-username/repository --path category/preset2
 ```
 
 ## Private repositories
@@ -66,5 +66,5 @@ npx use-preset your-username/repository --path category/preset2
 You can use private repositories if you [configured your SSH key](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account). Repositories are cloned using SSH by default, so there isn't anything special to do.
 
 ```bash
-npx use-preset your-username/private-repository
+npx apply your-username/private-repository
 ```

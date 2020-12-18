@@ -17,7 +17,7 @@ A flag is an argument that starts with two dashes (`--`). Any given flag will be
 You can define default values for flags by using [`Preset.option(name, value)`](/docs/api/preset#option).
 
 ```ts
-import { Preset } from 'use-preset';
+import { Preset } from 'apply';
 
 Preset.option('auth', true);
 Preset.extract('auth').ifHasOption('auth');

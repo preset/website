@@ -6,16 +6,16 @@ search: ''
 
 ## Installation
 
-Preset can be used by running `npx use-preset`. Running it this way will ensure that it is always up-to-date when you use it.
+Preset can be used by running `npx apply`. Running it this way will ensure that it is always up-to-date when you use it.
 
 However, if you are using it frequently, you may want to install it globally:
 
 ```bash
 # Yarn
-yarn global add use-preset
+yarn global add apply
 
 # NPM
-npm i -g use-preset
+npm i -g apply
 ```
 
 ## Requirements
@@ -28,17 +28,17 @@ A preset can be applied by providing its URL, GitHub handle or path as the first
 
 ```bash
 # GitHub handle
-npx use-preset organization/preset
+npx apply organization/preset
 
 # GitHub URL
-npx use-preset git@github.com:organization/preset.git
+npx apply git@github.com:organization/preset.git
 
 # Local path
-npx use-preset /your/local/preset
+npx apply /your/local/preset
 ```
 
 You can change the directory of installation by passing it as the second parameter. This may be useful for presets that are actually scaffolding projects.
 
 ```bash
-npx use-preset /your/local/preset your-app
+npx apply /your/local/preset your-app
 ```
