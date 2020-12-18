@@ -30,6 +30,9 @@ query ($id: ID!) {
       value
       anchor
     }
+		fileInfo {
+			path
+		}
   }
   allMarkdownPage{
     edges {
@@ -128,7 +131,7 @@ h4 {
 		}
 	}
 
-	a {
+	a:not(.not-anchor) {
 		&::before {
 			content: '#';
 			margin-left: -1em;

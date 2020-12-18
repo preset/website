@@ -1,7 +1,10 @@
 <template>
 	<aside v-if="headings.length > 0">
-		<h1 class="mb-2 text-sm font-bold tracking-tight uppercase text-on-sidebar-header">
-			On this page
+		<h1 class="flex items-center justify-between mb-2 text-sm font-bold tracking-tight uppercase text-on-sidebar-header">
+			<span>On this page</span>
+			<a :href="githubEditUrl" class="transition-colors duration-150 not-anchor hover:text-on-sidebar-hover " title="Edit on GitHub">
+				<icon icon="github" class="w-5 h-5" />
+			</a>
 		</h1>
 		<div>
 			<ul class="on-this-page">
@@ -40,13 +43,25 @@
 </template>
 
 <script>
+import Icon from '@/components/Icon.vue';
+
 export default {
+	components: {
+		Icon,
+	},
+
 	data: () => ({
 		activeAnchor: '',
 		observer: null,
 	}),
 
 	computed: {
+		githubEditUrl() {
+			return `${this.meta?.settings?.websiteRepository}/edit/master/content/${this.$page.markdownPage.fileInfo.path}`;
+		},
+		meta() {
+			return this.$static.metadata;
+		},
 		page() {
 			return this.$page.markdownPage;
 		},
@@ -145,3 +160,13 @@ export default {
 	},
 };
 </script>
+
+<static-query>
+query {
+  metadata {
+		settings {
+			websiteRepository
+		}
+  }
+}
+</static-query>

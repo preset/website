@@ -25,6 +25,7 @@ module.exports = {
 	},
 
 	settings: {
+		websiteRepository: process.env.WEBSITE_REPOSITORY,
 		links: [
 			{
 				id: 'docs',
