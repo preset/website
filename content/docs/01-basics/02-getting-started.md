@@ -18,6 +18,12 @@ yarn global add apply
 npm i -g apply
 ```
 
+### Mac OS and Free BSD
+
+You'll likely encounter an error when trying `npx apply` if you didn't install it locally. This is because `npx` looks in the `PATH`, and `apply` [already exists](https://www.freebsd.org/cgi/man.cgi?query=apply&manpath=4.4BSD+Lite2).
+
+To fix this, you need to install `apply`.
+
 ## Requirements
 
 Preset requires the current [long-term-support version of Node](https://nodejs.org/en/download/) and [Git](https://git-scm.com/downloads). Since presets are cloned locally, `git` must be accessible from the `PATH` environment variable.
