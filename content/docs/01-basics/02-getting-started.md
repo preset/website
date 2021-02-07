@@ -22,7 +22,7 @@ npm i -g apply
 
 You'll likely encounter an error when trying `npx apply` if you didn't install it locally. This is because `npx` looks in the `PATH`, and `apply` [already exists](https://www.freebsd.org/cgi/man.cgi?query=apply&manpath=4.4BSD+Lite2).
 
-To fix this, you need to install `apply`.
+To fix this, you need to install `apply` or use [`--ignore-existing`](https://www.npmjs.com/package/npx#description).
 
 ## Requirements
 
