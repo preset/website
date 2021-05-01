@@ -1,6 +1,6 @@
 <p align="center">
   <br />
-  <a href="https://usepreset.dev">
+  <a href="https://preset.dev">
     <img width="100" src="https://raw.githubusercontent.com/preset/cli/main/.github/assets/logo.svg" alt="Logo of the Preset tool">
   </a>
   <br />
@@ -10,7 +10,7 @@
 
 <p align="center">
   <br />
-  <a href="https://usepreset.dev">
+  <a href="https://preset.dev">
     <img alt="netlify" src="https://api.netlify.com/api/v1/badges/637d1b40-ac04-4811-adbf-a1ca6d63ca1f/deploy-status">
   </a>
 </p>
@@ -22,7 +22,7 @@
   <br />
   It was made to automate the repetitive task of doing the same modifications each time a project is created. 
   <br />
-  <a href="https://usepreset.dev">Visit the website</a>
+  <a href="https://preset.dev">Visit the website</a>
 </div>
 
 <p align="center">
