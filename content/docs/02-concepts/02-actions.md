@@ -18,9 +18,9 @@ The following actions are implemented. Note that each of them implement [`Action
 | [Apply](/docs/actions/apply/)                               | Applies other presets                                    |
 | [Edit JSON](/docs/actions/edit-json/)                       | Edits existing JSON files in the target directory        |
 | [Edit Env](/docs/actions/edit-env/)                         | Edits existing `.env` files in the target directory      |
-| [Edit](/docs/actions/edit/)                                 | Edits existing files in the target directory             |
+| [Edit](/docs/actions/edit-files/)                           | Edits existing files in the target directory             |
 | [Delete](/docs/actions/delete/)                             | Deletes existings files in the target directory          |
-| [Hook](/docs/actions/hook/)                                 | Executes arbitrary code                                 |
+| [Hook](/docs/actions/hook/)                                 | Executes arbitrary code                                  |
 | [Install dependencies](/docs/actions/install-dependencies/) | Installs Node or PHP dependencies                        |
 | [Prompt](/docs/actions/prompt/)                             | Asks the user for information                            |
 | [Execute](/docs/actions/execute/)                           | Executes a system command                                |
