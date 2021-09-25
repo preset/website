@@ -37,6 +37,12 @@ Preset.extract('default');
 Preset.extract('auth').ifHasOption('auth');
 ```
 
+## Testing the preset locally
+
+```shell
+npx apply /path/to/your/preset
+```
+
 ## Tip: archiving edited files
 
 When creating a preset from a test project, if you committed its initial state and started editing it, you can use `git diff` to list the modified files.
