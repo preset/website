@@ -51,6 +51,6 @@ git archive -o update.zip HEAD $(git diff --diff-filter=M --name-only)
 
 The next step is to build your preset. You can learn more about actions in [their documentation](/docs/concepts/actions/#actions).
 
-Then, you will need to [publish your preset](/docs/guide/hosting), or you can keep it local for your personal use.
+Then, you will need to [publish your preset](/docs/guides/hosting), or you can keep it local for your personal use.
 
 ?> Need help? Join our [Discord server](https://discord.gg/XWwzc45KZu).
