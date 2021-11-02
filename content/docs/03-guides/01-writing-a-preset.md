@@ -20,6 +20,15 @@ Run the following command, replacing `<preset-name>` by the directory in which y
 npx apply <preset-name> --init
 ```
 
+### Local code generator
+
+When you want to create a preset as a local code generator then you can run the init command with the `--no-git` option. 
+This is useful when you want to modify your code during development, for example you can write a generator which creates a new page and a route.
+
+```bash
+npx apply <preset-name> --init --no-git
+```
+
 ## Adding actions
 
 The `Preset` singleton exported by the `apply` dependency contains the entry points for declaring your preset's actions. You can learn more in [each action's documentation page](/docs/concepts/actions/#actions).
