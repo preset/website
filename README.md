@@ -1,6 +1,6 @@
 <p align="center">
   <br />
-  <a href="https://preset.dev">
+  <a href="https://legacy.preset.dev">
     <img width="100" src="https://raw.githubusercontent.com/preset/cli/main/.github/assets/logo.svg" alt="Logo of the Preset tool">
   </a>
   <br />
@@ -18,11 +18,12 @@
 <br />
 
 <div align="center">
-  An elegant, ecosystem-agnostic preset mechanism.
+  Note that this documentation website is for the previous version of Preset and is only available for viewing purposes.
   <br />
-  It was made to automate the repetitive task of doing the same modifications each time a project is created. 
+	The new website is located in the <a href="https://github.com/preset/preset"><code>docs</code> directory of the main repository</a>.
   <br />
-  <a href="https://preset.dev">Visit the website</a>
+  <br />
+  <a href="https://legacy.preset.dev">Visit the legacy website</a>
 </div>
 
 <p align="center">
